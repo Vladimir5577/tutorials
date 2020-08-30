@@ -1,0 +1,113 @@
+
+/*###################################
+	Working with databases
+#####################################*/
+ 
+SHOW DATABASES;  --  to see every databases
+
+USE students;	--  to use certain database
+
+CREATE DATABASE students;	--  to create database
+
+DROP DATABASE students;		--  delete database
+
+
+
+
+/*#####################################
+	Working with table			
+#######################################*/
+
+1. INT 				-- Whole Number
+2. DECIMAL (M, N)	-- Decimal Number
+3. VARCHAR
+4. BLOB
+5. DATE
+6. TIMESTAMP
+
+SHOW TABLES;    -- to show tables in certain databases
+
+SHOW COLUMNS FROM subjects;	 --  to show certain table
+
+DESCRIBE student;	--  to see structure
+
+DROP TABLE student;	  --  to delete table
+
+ALTER TABLE student ADD gpa DECIMAL(3, 2);   --  alter table to add column
+
+ALTER TABLE student DROP COLUMN gpa;	--   alte table to drop column
+
+
+
+CREATE TABLE student (
+	student_id INT PRIMARY KEY AUTO_INCREMENT,
+	name VARCHAR(20) NOT NULL,
+	major VARCHAR(20) UNIQUE
+);
+
+CREATE TABLE student (
+	student_id INT PRIMARY KEY AUTO_INCREMENT,
+	name VARCHAR(20) NOT NULL,
+	major VARCHAR(20) DEFAULT 'undecided'
+);
+
+
+/*###################################
+	Inserting data in database
+#####################################*/
+
+
+INSERT INTO student (id, name, major) VALUES (12, 'Bob', 'Biology');  -- insert
+
+
+
+
+
+/*###################################
+	Select data from database
+#####################################*/
+
+SELECT * FROM student;	--  select everything
+
+SELECT name, major FROM student;  -- select certain column
+
+SELECT student.name, student.major FROM student;  -- certain table
+
+SELECT name, major FROM student ORDER BY name;  -- alphabet order
+
+SELECT name, major FROM student ORDER BY name DESC /*or ASC*/;  -- alphabet descendent order /* ascendent */
+
+SELECT name, major FROM student ORDER BY name, id;
+
+SELECT * FROM student LIMIT 3;  --  limit
+
+SELECT * FROM student WHERE name = 'Bob'; 
+
+SELECT * FROM student WHERE name IN ('Bob', 'Mike', 'Jack'); 
+
+
+/*###################################
+	Update data in database
+#####################################*/
+
+
+UPDATE student SET major = 'Math', name = 'Bob' WHERE id = 7;
+
+UPDATE student SET major = 'Bio' WHERE major = 'Biology';
+
+UPDATE student SET major = 'Bio' WHERE major = 'Biology' OR name = 'Bob';
+
+UPDATE student SET major = 'Bio';  --  update everything (without WERE condion)
+
+
+/*###################################
+	Delete data from database
+#####################################*/
+
+DELETE FROM student WHERE student_id = 2;
+
+DELETE FROM student WHERE name = 'Bob' AND major = 'Biology';
+
+DELETE FROM student;  --  delete everything
+
+
