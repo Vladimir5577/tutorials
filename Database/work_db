@@ -1,0 +1,9 @@
+Dump database
+
+mysql -u user -ppassword students < ~/Загрузки/dump_img_18_08_20.sql 
+
+Deploy
+
+php artisan deploy staging -o branch=BRANCH_NAME
+
+
