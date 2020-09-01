@@ -67,6 +67,9 @@ INSERT INTO student (id, name, major) VALUES (12, 'Bob', 'Biology');  -- insert
 	Select data from database
 #####################################*/
 
+
+SELECT COUNT(*) FROM students;   -- to get number of rows in the "students" table
+
 SELECT * FROM student;	--  select everything
 
 SELECT name, major FROM student;  -- select certain column

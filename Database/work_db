@@ -1,6 +1,11 @@
-Dump database
+Dump database (upload in the database)
 
 mysql -u user -ppassword students < ~/Загрузки/dump_img_18_08_20.sql 
+
+Create file from database
+
+mysql -u root -p students > dump.sql
+
 
 Deploy
 
