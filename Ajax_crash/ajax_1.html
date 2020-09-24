@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax - 1 Text File</title>
+</head>
+<body>
+	<button id="button">Get Text File</button>
+
+	<script type="text/javascript">
+		// Create event listener
+		document.getElementById('button').addEventListener('click', loadText);
+
+		function loadText () {
+			// Create XHR object
+			var xhr = new XMLHttpRequest();
+			// open - type, url/file, async
+			xhr.open('GET', 'sample.txt', true);
+
+			xhr.onload = function () {
+				if (this.status == 200) {
+					console.log(this.responseText);
+				}
+			}
+			
+			// Sends request
+			xhr.send();
+		}
+
+		// HTTP Status
+		// 200 - "OK"
+		// 403 - "Forbidden"
+		// 404 - "Not Found"
+
+	</script>
+
+</body>
+</html>
