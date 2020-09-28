@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Local jsone</title>
+</head>
+
+<body>
+	<h1>Local Json</h1>
+
+	<button id="button_1">Get user</button>
+	<button id="button_2">Get user</button>
+	<br><br>
+
+	<h3>User</h3>
+	<div id="user"></div>
+
+	<h3>Users</h3>
+	<div id="users"></div>
+
+
+	<script type="text/javascript">
+		document.getElementById('button_1').addEventListener('click', loadUser);
+		document.getElementById('button_2').addEventListener('click', loadUsers);
+
+
+		// get simple json
+		function loadUser () {
+			var xhr = new XMLHttpRequest();
+			xhr.open('GET', 'user.json', true);
+
+			xhr.onload = function () {
+				if (this.status == 200) {
+					// console.log(this.responseText);
+					var user = JSON.parse(this.responseText);
+					
+					var output = "";
+					output += '<ul>' + 
+						'<li>Id: ' + user.id + '</li>' +
+						'<li>Name: ' + user.name + '</li>' +
+						'<li>City: ' + user.city + '</li>' +
+					'</ul>';
+					document.getElementById('user').innerHTML = output;
+				}
+			}
+
+			xhr.send();
+
+		}
+
+		// get array json
+		function loadUsers () {
+			var xhr = new XMLHttpRequest();
+			xhr.open('GET', 'users.json', true);
+
+			xhr.onload = function () {
+				console.log(this.status);
+				if (this.status == 200) {
+					// console.log(this.responseText);
+					var users = JSON.parse(this.responseText);
+					
+					var output = "";
+
+					for (var i in users) {
+						output += '<ul>' + 
+							'<li>Id: ' + users[i].id + '</li>' +
+							'<li>Title: ' + users[i].title + '</li>' +
+							'<li>Body: ' + users[i].body + '</li>' +
+						'</ul>';
+					}
+					document.getElementById('users').innerHTML = output;
+				}
+			}
+
+			xhr.send();
+		}
+
+	</script>
+
+</body>
+</html>
