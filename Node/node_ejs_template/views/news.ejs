@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>News</title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+	<%- include ('blocks/header.ejs'); -%>
+
+	<h1>News id: <%= newsId %></h1>
+	<p><%= newParam %></p>
+	<h3>Title: <%= obj.title %></h3>
+	<h3>Id: <%= obj.id %></h3>
+
+	<ul>
+		<% obj.myArray.forEach(function(item) { %>
+			<li><%= item %></li>
+		<% }); %>
+	</ul>
+
+</body>
+</html>
