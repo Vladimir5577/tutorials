@@ -5,6 +5,17 @@ Inside project folder type command
 	$ npm i express mysql
 
 	$ npm i -D nodemon
+	
+Add in package.json line:  "dev": "npx nodemon server/server.js -w server"
+
+{
+	...
+	"scripts": {
+		...
+		"dev": "npx nodemon server/server.js -w server"
+	}
+}
+
 
 
 To run app 
