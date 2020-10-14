@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<%- include ('blocks/header.ejs'); -%>
+	<title>Database</title>
+</head>
+<body>
+	<h1>Database</h1>
+
+	<table border="3px solid black" cellspacing="0" cellpadding="8">
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th>Country</th>
+			<th>Action</th>
+		</tr>
+
+		<% workers.forEach(function (item) { %>
+		<tr>
+			<td><%= item.id %></td>
+			<td><%= item.name %></td>
+			<td><%= item.country %></td>
+			<td>
+				<a href="/edit?id=<%= item.id %>" >Edit</a>
+				<a href="/delete?id=<%= item.id %>" onClick="return confirm('Are you sure ?')">Delete</a>
+			</td>
+		</tr>
+		<% }); %>
+	</table>
+
+</body>
+</html>
