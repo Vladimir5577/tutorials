@@ -47,8 +47,9 @@ function deleteCheck (event) {
 	// DELETE TODO
 	if (item.classList[0] === 'trash-btn') {
 		const todo = item.parentElement;
-		todo.classList.add('fall');
 		// Animation
+		todo.classList.add('fall');
+		// removeLocalTodos(todo); // --- uncoment -----------------
 		todo.addEventListener('transitionend', function () {
 			todo.remove();
 		});
@@ -64,8 +65,9 @@ function deleteCheck (event) {
 
 function filterTodo (event) {
 	const todos = todoList.childNodes;
+	console.log(todos);
 	todos.forEach(function (todo) {
-		console.log(todo.target.value);
+		// console.log(todo.target.value);
 		switch (event.target.value) {
 			case 'all':
 				todo.style.display = 'flex';
@@ -143,4 +145,8 @@ function removeLocalTodos (todo) {
 		todos = JSON.parse(localStorage.getItem('todos'));
 	}
 
+	const todoIndex = todo.children[0].innerText;
+	todo.splice(todos.indexOf(todoIndex), 1);
+	localStorage.setItem('todos', JSON.stringify(todos));
 }
+
