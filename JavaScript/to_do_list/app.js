@@ -24,7 +24,7 @@ function addTodo (event) {
 	newTodo.classList.add('todo-item');
 	todoDiv.appendChild(newTodo);
 	// ADD TODO TO LOCALSTORAGE
-	// saveLocalTodos(todoInput.value);  // ------------- uncoment ----
+	saveLocalTodos(todoInput.value);  //  save to local storage -----------
 	// CHECK MARK BUTTON
 	const completedButton = document.createElement('button');
 	completedButton.innerHTML = '<button class="btn-item-check">Check</button>';
@@ -49,7 +49,7 @@ function deleteCheck (event) {
 		const todo = item.parentElement;
 		// Animation
 		todo.classList.add('fall');
-		// removeLocalTodos(todo); // --- uncoment -----------------
+		removeLocalTodos(todo); // remove from local storage -----------
 		todo.addEventListener('transitionend', function () {
 			todo.remove();
 		});
@@ -67,7 +67,6 @@ function filterTodo (event) {
 	const todos = todoList.childNodes;
 	console.log(todos);
 	todos.forEach(function (todo) {
-		// console.log(todo.target.value);
 		switch (event.target.value) {
 			case 'all':
 				todo.style.display = 'flex';
@@ -90,6 +89,7 @@ function filterTodo (event) {
 	});
 }
 
+// Save to local starage
 function saveLocalTodos (todo) {
 	// check if item already exist
 	let todos;
@@ -136,6 +136,7 @@ function getTodos () {
 	});
 }
 
+// Remove from local storage
 function removeLocalTodos (todo) {
 	// check if item already exist
 	let todos;
@@ -146,7 +147,7 @@ function removeLocalTodos (todo) {
 	}
 
 	const todoIndex = todo.children[0].innerText;
-	todo.splice(todos.indexOf(todoIndex), 1);
+	todos.splice(todos.indexOf(todoIndex), 1);
 	localStorage.setItem('todos', JSON.stringify(todos));
 }
 
