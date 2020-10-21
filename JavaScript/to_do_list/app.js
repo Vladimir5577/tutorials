@@ -27,12 +27,12 @@ function addTodo (event) {
 	saveLocalTodos(todoInput.value);  //  save to local storage -----------
 	// CHECK MARK BUTTON
 	const completedButton = document.createElement('button');
-	completedButton.innerHTML = '<button class="btn-item-check">Check</button>';
+	completedButton.innerHTML = 'Check';
 	completedButton.classList.add('complete-btn');
 	todoDiv.appendChild(completedButton);
 	// CHECK TRACH BUTTON
 	const trashButton = document.createElement('button');
-	trashButton.innerHTML = '<button class="btn-item-trash">Trash</button>';
+	trashButton.innerHTML = 'Trash';
 	trashButton.classList.add('trash-btn');
 	todoDiv.appendChild(trashButton);
 	// APPEND TO LIST
@@ -65,8 +65,7 @@ function deleteCheck (event) {
 
 function filterTodo (event) {
 	const todos = todoList.childNodes;
-	console.log(todos);
-	todos.forEach(function (todo) {
+ 	todos.forEach(function(todo) {
 		switch (event.target.value) {
 			case 'all':
 				todo.style.display = 'flex';
@@ -123,12 +122,12 @@ function getTodos () {
 		todoDiv.appendChild(newTodo);
 		// CHECK MARK BUTTON
 		const completedButton = document.createElement('button');
-		completedButton.innerHTML = '<button class="btn-item-check">Check</button>';
+		completedButton.innerHTML = 'Check';
 		completedButton.classList.add('complete-btn');
 		todoDiv.appendChild(completedButton);
 		// CHECK TRACH BUTTON
 		const trashButton = document.createElement('button');
-		trashButton.innerHTML = '<button class="btn-item-trash">Trash</button>';
+		trashButton.innerHTML = 'Trash';
 		trashButton.classList.add('trash-btn');
 		todoDiv.appendChild(trashButton);
 		// APPEND TO LIST
