@@ -1,0 +1,132 @@
+---------------------------------------------------------
+
+Start
+
+---------------------------------------------------------
+
+vim name.txt  -  to start vim 
+i  -  insert 
+
+esc - to change mode
+
+:w  - save changes
+:q  - quit
+:q! - quit without saving
+:wq - write and quit
+
+----------------------------------------------------------
+
+Navigation
+
+------------------------------------------------------------
+
+j - down
+k - up
+l - right
+h - left
+
+7j - move 7 line down
+7k - move 7 line up
+5l - move 5 caracter left
+5h - move 5 caracter right
+
+Ctrl-f  - page down
+Ctrl-b  - page up
+
+W, w - to move rigt 1 word
+B, b - to move left 1 word
+
+5w - to move 5 words right
+3b - to move 3 words left
+
+gg - to move to the beginning
+G  - to move to the end 
+:$  - to move to the end
+
+5gg - to move line 5
+5G  - to move line 5
+:7  - to move line 7
+
+zz - to move view of the location cursore on the top
+z-Enter - to move wiev
+
+0 - to jump on the beginning of the line
+
+^  -  to move on beginning of the line
+$  -  to move on the end of the line
+%  -  to switch beetwen bracket
+
+g + Ctrl-G - information about the file
+
+
+
+---------------------------------------------------------
+
+Deleting and thinking in vim
+
+---------------------------------------------------------
+
+x - deleting letter in cursor position
+X - delete letter on right from cursor
+
+d - the delete operation
+w - the word motion
+
+dh - delete to right
+dl - delete to left
+dj - delete to down (current line from cursor and line down)
+dk - delete to up (current line from cursor and line up)
+
+dw - delete a word
+d3w - delete 3 words
+
+d0 - delete from cursor to begining of the line
+d$, D - delete from cousor to the end of the line
+
+dd - delete entirely line 
+3dd - delete 3 line beloy
+
+. - repeat previous command
+
+asl;dfjadslfasd as ads a
+asdf
+
+
+
+---------------------------------------------------------
+
+Getting Help
+
+---------------------------------------------------------
+
+:help - to see help
+:q	- quit out from help
+
+:help <command> - cpecify command for help
+
+:help dd - to see help about certain command
+
+
+
+---------------------------------------------------------
+
+Cut, Copy, Paste
+
+---------------------------------------------------------
+
+dd - cut the line on the cursor
+x  - cut letter
+p  - paste text	after cursor
+P  - paste text before cursor
+y - copy
+yp - copy a word
+2yp - copy 2 words
+y2w - copy 2 words
+y$ - copy the line from cursor to the end
+
+u - undo last change
+Ctrl-r - redo 
+
+13 accomplished
+
+

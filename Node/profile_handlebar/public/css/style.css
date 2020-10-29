@@ -1,0 +1,56 @@
+body {
+	background-color: #001240;
+	font-family: arial;
+}
+
+.container {
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+nav {
+	display: flex;
+	justify-content: flex-start;
+	height: 150px;
+	color: #fff;
+}
+
+.userPic {
+	height: 100%;
+	width: auto;
+}
+
+.userDetails {
+	background-color: #00A7DB;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+	padding: 0px 15px;
+	flex-grow: 2;
+}
+
+.userDetails h1 {
+	margin: 0;
+	font-size: 28px;
+}
+
+.home {
+	background-color: #00C1EA;
+}
+
+.projects {
+	background-color: #94D401;
+}
+
+.contact {
+	background-color: #61B100;
+}
+
+.home, .projects, .contact {
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-grow: 1;
+}

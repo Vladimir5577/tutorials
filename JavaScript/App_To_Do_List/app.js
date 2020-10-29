@@ -65,6 +65,7 @@ function deleteCheck (event) {
 
 function filterTodo (event) {
 	const todos = todoList.childNodes;
+	console.log(todos);
  	todos.forEach(function(todo) {
 		switch (event.target.value) {
 			case 'all':
