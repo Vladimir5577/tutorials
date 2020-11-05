@@ -115,7 +115,8 @@ Cut, Copy, Paste
 ---------------------------------------------------------
 
 dd - cut the line on the cursor
-x  - cut letter
+x  - cut letter after cursor
+X  - cut letter before cursor
 p  - paste text	after cursor
 P  - paste text before cursor
 y - copy
@@ -127,6 +128,94 @@ y$ - copy the line from cursor to the end
 u - undo last change
 Ctrl-r - redo 
 
-13 accomplished
+yy - copy whole line
+
+:reg - to see register
+"2p  - paste 2 line from register
+
+
+---------------------------------------------------------
+
+Insert, Changing, Replacing and joining
+
+---------------------------------------------------------
+
+o - create a new line below cursor and start insert mode
+O - create a new line abow the cursor and atart insert mode
+i - insert mode
+
+Shift+i  -  put the cursor to the beginning and start insert mode
+Shift+a  -  put the cursor to the end of the line and start insert mode
+
+10i*+Esc  -  to write 10 astericks
+5o#+Esc - to put 5 line with # 
+
+5obla+Esc - to write 5 line with 'bla' beginning
+
+R - replace mode
+r - replace 1 carracter
+
+cw - replace a word
+c$ - replace from cursor position to the end of the line
+cc - replace a line cursor position
+
+~  - replace letter to upper/lower case
+g~~  -  replace a line to upper/lower case
+g~$  -  replace from cursor to the end of the line to upper/lower case
+gUU  -  line to upper case 
+guu  -  line to lower case
+
+J  -  to uppend line below
+gJ -  to uppend line without space 
+
+
+
+---------------------------------------------------------
+
+Search, Find, Replace
+
+---------------------------------------------------------
+
+fb - to search 'b' letter on the cursor line
+Fb - to search 'b' letter backward from cursor
+
+fa - to search 'a' letter and press ';' to continue and ',' to opposite direction
+
+ta - to put cursor before 'a' letter, to continue press ':' 
+Ta - to put cursor after 'a' letter, to continue press 
+
+dta - to delete everything until 'a' letter
+
+/bla - to search 'bla' in whole document, type 'n' to continue search or 'N' to revers the search
+
+:set is? - check option incremental search (should 'incsearch')
+:set incsearch - add configuration in config file
+
+:set hls? - to check highliting search
+:set hls  - to turn on highliting search
+:set nohls - to turn off the highlighting
+
+. - repeation a command
+* - to find another matching word what in cursor position
+# - to search matching word what in cursor position
+d/bla - to delete everything to the word 'bla'
+
+
+
+lldffjjd2asdfas
+3asdfa
+asdf
+1asdf
+2
+34
+234
+
+bla
+
+ASDF ck jksdfjkkkjj  asdfasdfa~~~~jjj~hhi
+
+hELLO wORLD
+
+17 accomplished
 
 

@@ -1,0 +1,11 @@
+In the folder /etc/vim/ inside file vimrc put command 
+
+
+syntax on
+set tabstop=4
+set autoindent
+set wrap
+set number
+set mouse=a
+set incseatch
+set hlsearch
