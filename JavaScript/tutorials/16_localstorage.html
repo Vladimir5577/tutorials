@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Localstorage</title>
+</head>
+<body>
+
+	<h1>Localstorage</h1>
+
+
+	<script type="text/javascript">
+		// localstorage working only with text
+
+		/*
+		const myNumber = 42;
+		localStorage.setItem('number', myNumber.toString());
+		console.log(localStorage.getItem('number'));
+		*/
+
+		// to remove item
+		//localStorage.removeItem('number');
+
+		// clear localstorage
+		// localStorage.clear();
+
+		const object = {
+			name: 'Bob',
+			age: 25
+		};
+
+		localStorage.setItem('person', JSON.stringify(object));
+		const raw = localStorage.getItem('person');
+		const person = JSON.parse(raw);
+		person.name = 'Mike';
+
+		console.log(person);
+
+	</script>
+
+</body>	
+</html>
