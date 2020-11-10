@@ -1,0 +1,74 @@
+mongo --- start mongodb
+
+show dbs; --- show databases 
+
+use myCustomers; --- createand switch to this database
+
+db --- check current database
+
+Create record:
+
+db.createUser({
+	user: "Bob",
+	pwd: "1234",
+	roles: ["readWrite", "dbAdmin"]
+});
+
+
+use myCustomers; --- create and switch to this database 
+
+db.createCollection('customers'); --- create collection (table for mysql)
+
+show collections; ---  to show collections
+
+db.customers.insert({first_name: "Bob", last_name: "Cumer"});  --- insert record to the collection
+
+db.customers.find(); --- find all record from the collection
+
+db.customers.find().pretty();  ---  to show in readable format
+
+db.customers.update({first_name: "Bob"}, {first_name: "New Bob", last_name: "New", age: 24}); --- update with match name 
+
+db.customers.update({first_name: "Bob"}, {$set:{gender: "male"}}); --- keep previous and add new caracter to the record with $set
+
+db.customers.update({first_name: "Bob"}, {$inc:{age:5}}); --- update increment the age record
+
+db.customers.update({first_name: "Bob"}, {$unset:{age: 1}});  --- delete 'age' record
+
+db.customers.update({first_name: "Mary"}, {first_name: "Mary Lui", last_name: "Samson"}, {upsert: true}); --- update or create
+
+db.customers.update({first_name: "Bob"}, {$rename:{"first_name": "name"}});  --- to change the key
+
+db.customers.remove({first_name: "Mike"});  ---  to remove the record
+
+db.customers.remove({first_name: "Bob"}, {justOne: true});  ---  to remove only one record (limit)
+
+db.customers.find({first_name: "Bob"});  ---  find the record (where name Bob)
+
+db.customers.find($or:[{name: "Bob"}, {name: "Mike"}]);  ---  find few records
+
+db.customers.find({gender: "male"});  ---  find every male
+
+db.customers.find({age: {$lt: 30}});  --- find age < 30, $lt => <. $gt => >, $lti => =<, $gti => >= 
+
+db.customers.find({"address.city": "London"});  --- find inside an object
+
+db.customers.find().sort({name: 1});  ---  find in the ascending order
+
+db.customers.find().sort({name: -1});  --- find in the descending order
+
+db.customers.find().count();  ---  count records
+
+db.customers.find({gender: "male"}).count(); ---  count certains records
+
+db.customers.find().limit(10); ---  find with limit 10
+
+db.customers.find().limit(10).sort({name: 1}); ---  find with limit 10 in acdending order
+
+db.customers.find().forEach(function(doc){print("Customer Name: " + doc.first_name)});
+
+
+sudo apt-get install vim-gtk3 -y  --- install clipboard 
+:echo has('clipboard') --- to check 
+"+y --- copy to clipboard
+

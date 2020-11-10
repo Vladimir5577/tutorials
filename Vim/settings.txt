@@ -9,3 +9,11 @@ set number
 set mouse=a
 set incseatch
 set hlsearch
+
+inoremap ( ()<left>  - for autocompletion
+inoremap { {}<left>
+
+
+sudo apt-get install vim-gtk3 -y  --- install clipboard for copy and paste
+:echo has('clipboard') --- to check 
+"+y --- copy to clipboard

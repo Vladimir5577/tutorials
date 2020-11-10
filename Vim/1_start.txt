@@ -4,15 +4,18 @@ Start
 
 ---------------------------------------------------------
 
-vim name.txt  -  to start vim 
-i  -  insert 
+vim name.txt  ---  to start vim 
 
-esc - to change mode
+i  ---  insert 
+I  ---  insert on the begining of the line
+A  ---  insert on the end of the line
 
-:w  - save changes
-:q  - quit
-:q! - quit without saving
-:wq - write and quit
+esc --- to change mode
+
+:w  --- save changes
+:q  --- quit
+:q! --- quit without saving
+:wq --- write and quit
 
 ----------------------------------------------------------
 
@@ -20,43 +23,45 @@ Navigation
 
 ------------------------------------------------------------
 
-j - down
-k - up
-l - right
-h - left
+j --- down
+k --- up
+l --- right
+h --- left
 
-7j - move 7 line down
-7k - move 7 line up
-5l - move 5 caracter left
-5h - move 5 caracter right
+7j --- move 7 line down
+7k --- move 7 line up
+5l --- move 5 caracter left
+5h --- move 5 caracter right
 
-Ctrl-f  - page down
-Ctrl-b  - page up
+Ctrl-f  --- page down
+Ctrl-b  --- page up
 
-W, w - to move rigt 1 word
-B, b - to move left 1 word
+W, w --- to move rigt 1 word
+B, b --- to move left 1 word
 
-5w - to move 5 words right
-3b - to move 3 words left
+M  --- to put the cursor on the middle of the screen
 
-gg - to move to the beginning
-G  - to move to the end 
-:$  - to move to the end
+5w --- to move 5 words right
+3b --- to move 3 words left
 
-5gg - to move line 5
-5G  - to move line 5
-:7  - to move line 7
+gg --- to move to the beginning
+G  --- to move to the end 
+:$  --- to move to the end
 
-zz - to move view of the location cursore on the top
-z-Enter - to move wiev
+5gg --- to move line 5
+5G  --- to move line 5
+:7  --- to move line 7
 
-0 - to jump on the beginning of the line
+zz --- to move view of the location cursore on the top
+z-Enter --- to move wiev
 
-^  -  to move on beginning of the line
-$  -  to move on the end of the line
-%  -  to switch beetwen bracket
+0 --- to jump on the beginning of the line
 
-g + Ctrl-G - information about the file
+^  ---  to move on beginning of the line
+$  ---  to move on the end of the line
+%  ---  to switch beetwen bracket
+
+g + Ctrl-G --- information about the file
 
 
 
@@ -66,27 +71,27 @@ Deleting and thinking in vim
 
 ---------------------------------------------------------
 
-x - deleting letter in cursor position
-X - delete letter on right from cursor
+x --- deleting letter in cursor position
+X --- delete letter on right from cursor
 
-d - the delete operation
-w - the word motion
+d --- the delete operation
+w --- the word motion
 
-dh - delete to right
-dl - delete to left
-dj - delete to down (current line from cursor and line down)
-dk - delete to up (current line from cursor and line up)
+dh --- delete to right
+dl --- delete to left
+dj --- delete to down (current line from cursor and line down)
+dk --- delete to up (current line from cursor and line up)
 
-dw - delete a word
-d3w - delete 3 words
+dw --- delete a word
+d3w --- delete 3 words
 
-d0 - delete from cursor to begining of the line
-d$, D - delete from cousor to the end of the line
+d0 --- delete from cursor to begining of the line
+d$, D --- delete from cousor to the end of the line
 
-dd - delete entirely line 
-3dd - delete 3 line beloy
+dd --- delete entirely line 
+3dd --- delete 3 line beloy
 
-. - repeat previous command
+. --- repeat previous command
 
 asl;dfjadslfasd as ads a
 asdf
@@ -99,12 +104,12 @@ Getting Help
 
 ---------------------------------------------------------
 
-:help - to see help
-:q	- quit out from help
+:help --- to see help
+:q	--- quit out from help
 
-:help <command> - cpecify command for help
+:help <command> --- cpecify command for help
 
-:help dd - to see help about certain command
+:help dd --- to see help about certain command
 
 
 
@@ -114,24 +119,24 @@ Cut, Copy, Paste
 
 ---------------------------------------------------------
 
-dd - cut the line on the cursor
-x  - cut letter after cursor
-X  - cut letter before cursor
-p  - paste text	after cursor
-P  - paste text before cursor
-y - copy
-yp - copy a word
-2yp - copy 2 words
-y2w - copy 2 words
-y$ - copy the line from cursor to the end
+dd --- cut the line on the cursor
+x  --- cut letter after cursor
+X  --- cut letter before cursor
+p  --- paste text	after cursor
+P  --- paste text before cursor
+y --- copy
+yp --- copy a word
+2yp --- copy 2 words
+y2w --- copy 2 words
+y$ --- copy the line from cursor to the end
 
-u - undo last change
-Ctrl-r - redo 
+u --- undo last change
+Ctrl-r --- redo 
 
-yy - copy whole line
+yy --- copy whole line
 
-:reg - to see register
-"2p  - paste 2 line from register
+:reg --- to see register
+"2p  --- paste 2 line from register
 
 
 ---------------------------------------------------------
@@ -140,39 +145,39 @@ Insert, Changing, Replacing and joining
 
 ---------------------------------------------------------
 
-o - create a new line below cursor and start insert mode
-O - create a new line abow the cursor and atart insert mode
-i - insert mode
-I - put cursor on beginning of the line and start insert mode
+o --- create a new line below cursor and start insert mode
+O --- create a new line abow the cursor and atart insert mode
+i --- insert mode
+I --- put cursor on beginning of the line and start insert mode
 
-a - insert mode after cursor position
-A - insert mode on the end of the line
+a --- insert mode after cursor position
+A --- insert mode on the end of the line
 
-Shift+i  -  put the cursor to the beginning and start insert mode
-Shift+a  -  put the cursor to the end of the line and start insert mode
+Shift+i  ---  put the cursor to the beginning and start insert mode
+Shift+a  ---  put the cursor to the end of the line and start insert mode
 
-10i*+Esc  -  to write 10 astericks
-5o#+Esc - to put 5 line with # 
+10i*+Esc  ---  to write 10 astericks
+5o#+Esc --- to put 5 line with # 
 
-5obla+Esc - to write 5 line with 'bla' beginning
+5obla+Esc --- to write 5 line with 'bla' beginning
 
-R - replace mode
-r - replace 1 carracter
+R --- replace mode
+r --- replace 1 carracter
 
-cw - replace a word
-c$ - replace from cursor position to the end of the line
-cc - replace a line cursor position
+cw --- replace a word
+c$ --- replace from cursor position to the end of the line
+cc --- replace a line cursor position
 
-~  - replace letter to upper/lower case
-g~~  -  replace a line to upper/lower case
-g~$  -  replace from cursor to the end of the line to upper/lower case
-gUU  -  line to upper case 
-guu  -  line to lower case
-gUw  -  to upper case the word
-guw  -  to lower case
+~  --- replace letter to upper/lower case
+g~~  ---  replace a line to upper/lower case
+g~$  ---  replace from cursor to the end of the line to upper/lower case
+gUU  ---  line to upper case 
+guu  ---  line to lower case
+gUw  ---  to upper case the word
+guw  ---  to lower case
 
-J  -  to uppend line below to the current line
-gJ -  to uppend line without space 
+J  ---  to uppend line below to the current line
+gJ ---  to uppend line without space 
 
 
 
@@ -182,49 +187,114 @@ Search, Find, Replace
 
 ---------------------------------------------------------
 
-fb - to search 'b' letter on the cursor line
-Fb - to search 'b' letter backward from cursor
+fb --- to search 'b' letter on the cursor line
+Fb --- to search 'b' letter backward from cursor
 
-fa - to search 'a' letter and press ';' to continue and ',' to opposite direction
+fa --- to search 'a' letter and press ';' to continue and ',' to opposite direction
 
-ta - to put cursor before 'a' letter, to continue press ':' 
-Ta - to put cursor after 'a' letter, to continue press ','
+ta --- to put cursor before 'a' letter, to continue press ':' 
+Ta --- to put cursor after 'a' letter, to continue press ','
 
-cw - to replace the word
-cW - to replace the word and punctuation
-cc - to replace the entairy line
+cw --- to replace the word
+cW --- to replace the word and punctuation
+cc --- to replace the entairy line
 
-dta - to delete everything until 'a' letter
+dta --- to delete everything until 'a' letter
 
-/bla - to search 'bla' in whole document, type 'n' to continue search or 'N' to revers the search
+/bla --- to search 'bla' in whole document, type 'n' to continue search or 'N' to revers the search
+?bla --- to search 'bla' in reverse, type 'n' to continue search or 'N' to revers the search
+/bla<Space> --- to search bla word (only word 'bla')
 
-:set is? - check option incremental search (should 'incsearch')
-:set incsearch - add configuration in config file
 
-:set hls? - to check highliting search
-:set hls  - to turn on highliting search
-:set nohls - to turn off the highlighting
+:set is? --- check option incremental search (should 'incsearch')
+:set incsearch --- add configuration in config file
 
-. - repeation a command
-* - to find another matching word what in cursor position
-# - to search matching word what in cursor position
-d/bla - to delete everything to the word 'bla'
+:set hls? --- to check highliting search
+:set hls  --- to turn on highliting search
+:set nohls --- to turn off the highlighting
 
-:s/bla/foo/  -  to change word 'bla' on 'foo' in line cursor position (first caracter
-:s/bla/foo/g -  to change word 'bla' on 'foo' 
-1,2,5s/bla/foo/  - to change word 'bla' on 'foo' on lines 1, 2, 5
-:%s/bla/foo/g  - to change everything
+. --- repeation a command
+* --- to find another matching word what in cursor position
+# --- to search matching word what in cursor position
+d/bla --- to delete everything to the word 'bla'
 
-% - entire file
-1,$ - entire file
-$ - represent the last line in the file
-. - represent the current line in the file
-.,$ - from current line to the last line
+:s/bla/foo/  ---  to change word 'bla' on 'foo' in line cursor position (first caracter
+:s/bla/foo/g ---  to change word 'bla' on 'foo' 
+1,2,5s/bla/foo/  --- to change word 'bla' on 'foo' on lines 1, 2, 5
+:%s/bla/foo/g  --- to change everything
+
+% --- entire file
+1,$ --- entire file
+$ --- represent the last line in the file
+. --- represent the current line in the file
+.,$ --- from current line to the last line
 
 Specify a search pattern
 
 /pattern-1/,/pattern-2/ 
-:/bla/,/foo/s/bad/good/g - to change between words 'bla' and 'foo'
+:/bla/,/foo/s/bad/good/g --- to change between words 'bla' and 'foo'
+
+
+
+
+---------------------------------------------------------
+
+Text Objects
+
+---------------------------------------------------------
+
+daw --- delete a word in the cursor position and space 
+diw --- delete a word in the cursor position without space
+
+dis --- delete a sentence in the cursor position
+das --- ------
+
+dap --- delete a paragraph in the cursor position
+dip --- ---
+
+ci( --- to replace text in the () bracket
+ca( --- to detete text in the () bracker and brackets
+
+yi( --- to copy inside ()
+ya( --- to copy text and bracket ()
+
+cit --- to delete text inside html tag
+cat --- to delete text and html tag
+
+dat --- to delete whole html tag
+
+J --- join 2 lines together
+
+
+"ay --- copy to 'a' register
+"ap --- paste text from 'a' register
+:reg --- to see register
+:reg a ---  to see the text in a register
+
+"syas --- copy sentense to 's' register
+dap  ---  delete a parograph
+
+
+
+---------------------------------------------------------
+
+Macros
+
+---------------------------------------------------------
+
+qa  ---  start record macro
+q   ---  stop record macro
+@a  ---  repeat command on the cursor position line
+@@  ---  repeat command on the cursor position line
+
+5@a --- to repeat command 5 times
+
+:reg a --- to see register 'a'
+
+qA --- to uppend commands to 'a' register
+
+Start register 'qa' then type insertion commands and to stop 
+type 'q'. Check ':reg a'. 
 
 
 
@@ -242,6 +312,6 @@ ASDF ck jksdfjkkkjj  asdfasdfa~~~~jjj~hhi
 
 hELLO wORLD
 
-19 accomplished
+23 accomplished
 
 

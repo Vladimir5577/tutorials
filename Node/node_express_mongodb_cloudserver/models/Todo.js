@@ -11,4 +11,10 @@ const schema = new Schema({
 	}
 });
 
+schema.methods.toJson = function () {
+	const myData = this.toObject();
+	myData._id.toString();
+	return myData;
+};
+
 module.exports = model('Todo', schema);

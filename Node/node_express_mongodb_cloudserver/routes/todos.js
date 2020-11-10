@@ -4,11 +4,12 @@ const router = Router();
 
 router.get('/', async (req, res) => {
 	const todos = await Todo.find({});
+	console.log(todos[0].toJson());
 
 	res.render('index', {
 		title: 'Todos list',
 		isIndex: true,
-		todos
+		todos: todos.map(item => item.toJson())
 	});
 });
 

@@ -1,3 +1,9 @@
+To install project (node module) type 
+	
+	$ npm i
+
+================================================
+
 Create project folder and in the folder type
 
 	$ npm init -y
