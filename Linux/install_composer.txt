@@ -1,0 +1,8 @@
+1. In the first place install composer in any directory
+2. Then run command 
+	
+	$ mv composer.phar /usr/local/bin/composer
+
+3. Then check 
+
+	$ composer
