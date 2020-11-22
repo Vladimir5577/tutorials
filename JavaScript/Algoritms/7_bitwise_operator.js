@@ -8,7 +8,7 @@
 4 : 100
 8 : 1000
 
-A bitrise operation can be used to check if a number is power of two:
+A bitwise operation can be used to check if a number is power of two:
 
 number & (number - 1) === 0  // true: it's power of two
 

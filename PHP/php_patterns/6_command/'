@@ -1,0 +1,65 @@
+<?php 
+
+	class Book {
+		private $title;
+		private $author;
+
+		public function __construct ($title_in, $author_in) {
+			$this->setTitle($title_in);
+			$this->setAuthor($author_in);
+		}
+
+		public function setTitle ($title_in) {
+			$this->title = $title_in;
+		}
+
+		public function setAuthor ($author_in) {
+			$this->author = $author_in;
+		}
+
+		public function getTitle () {
+			return $this->title;
+		}
+
+		public function getAuthor () {
+			return $this->author;
+		}
+
+		public function setStarsOn () {
+			$this->setTitle(Str_replace(' ', '*', $this->getTitle()));
+			$this->setAuthor(Str_replace(' ', '*', $this->getAuthor()));
+		}
+
+		public function getAuthorAndTitle () {
+			return $this->getTitle() . ' by ' . $this->getAuthor();
+		}
+	}
+
+	abstract class BookCommand {
+		protected $command;
+
+		public function __construct ($my_command) {
+			$this->command = $my_command;
+		}
+
+		abstract function execute();
+	}
+
+	class BookStarsOn extends BookCommand {
+		public function execute () {
+			$this->command->setStarsOn();
+		}
+	}
+
+	$book = new Book(' Design Pattern ', ' Author ');
+
+	$bookStars = new BookStarsOn($book);
+
+	// $bookStars->execute();
+
+	echo $book->getAuthorAndTitle();
+
+
+
+
+?>

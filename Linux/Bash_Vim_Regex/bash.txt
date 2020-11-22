@@ -1,0 +1,239 @@
+======================================================
+
+Using Shell
+
+======================================================
+
+
+echo $SHELL --- check shell (if bash it should /bin/bash)
+
+ls  ---  list files
+ls /  ---  argument for 'ls'
+ls data --- list files in 'data' folder
+
+/ --- absolute path
+
+ls / --- to see folders in base 
+
+ls -1  ---  to see files and folders each in new line
+
+cd  ---  change directory
+man ls --- help for 'ls'
+
+
+
+======================================================
+
+Alias
+
+======================================================
+
+
+alias ---   
+
+vim ~/.bashrc  ---  file with aliases
+
+
+======================================================
+
+Specil Directories
+
+======================================================
+
+
+..  ---  the parent directory
+.   ---  the current directory
+~   ---  home directory
+
+cd ~  ---  home directory
+
+pwd  ---  to see the currend directory (absolute path)
+
+
+
+======================================================
+
+Combining and Copying
+
+======================================================
+
+
+cat  ---  to see internal data 
+
+cat index.txt  ---  to see data insede file
+
+cat ../data/   ---  to see data in the folder
+
+reset  --- if terminal stack
+
+cp index.txt message.txt  ---  copy 'index.txt' and rename it to 'message.txt'
+
+cp index.txt ../  ---  copy 'index.txt' to parent directory
+
+mkdir data  ---  make directory 'data'
+
+cp index.txt test.txt data  ---  copy 2 files to 'data' folder
+
+cp -r  ---  recursively copy
+
+man cp  ---  help about 'cp' command
+
+
+
+======================================================
+
+Moving Files and Creating Directories
+
+======================================================
+
+
+mv ---  move or overwrite
+
+mv message.txt msg.txt  --- rename 'message.txt' to 'msg.txt'
+
+mkdir  ---  make direktory
+
+mkdir data  --- make 'data' directory
+
+mkdir -p a/b/c/c/data ---  make nested directory 'data'
+
+
+
+======================================================
+
+Command to help reduce repetitive typing
+
+======================================================
+
+
+echo *.txt ---  to see every file with '.txt' extension
+
+
+
+
+======================================================
+
+Delete
+
+======================================================
+
+
+rm text.txt  ---  delete the file
+
+rm -rf text.txt  --- delete file or directory
+
+wc ---  words count
+
+wc -l  --- lines count
+
+wc -c  ---  size
+
+wc -w ---  word count
+
+
+
+======================================================
+
+
+
+======================================================
+
+ 
+head index.txt  ---  see first 10 lines
+head -n 5 index.txt  ---  to see first 5 lines
+head --lines=5 index.txt  --- to see first 5 lines
+
+
+
+======================================================
+
+Writing and Reading
+
+======================================================
+
+
+echo Hello there > hello.txt  ---  write 'Hello there' in 'hello.txt' file (or overwrite)
+
+ls > list.txt  ---  write list in 'list.txt' file
+
+echo hello there >> hello.txt  --- write to existing 'hello.txt' file 
+
+
+
+
+======================================================
+
+Pipes
+
+======================================================
+
+
+| ---  to combine command
+
+ls -1 | wc -l  ---  count files in the directory
+
+ls -1 *.txt | wc -l  --- connt files with '.txt' extension
+
+ls -1 *txt  ---  to see files with '.txt' extension
+
+
+
+======================================================
+
+Curl Grep and Pipeline
+
+======================================================
+
+
+curl --- load url and display content
+
+curl -s http://test  ---  load and display content
+
+grep ---
+
+
+
+======================================================
+
+Haid and tail
+
+======================================================
+
+
+head -n5 index.txt  ---  to see first 5 lines of the file
+
+tail -n5 index.txt  ---  to see last 5 lines of the file
+
+
+
+
+======================================================
+
+Calendar and Dates
+
+======================================================
+
+
+cal --- to see calendar
+ 
+cal 2020  ---  to see whole calendar
+
+cal nov 2020  ---  to see certain month
+
+date  ---  to see date
+
+
+======================================================
+
+Backticks
+
+======================================================
+
+echo `date`  --- to see current date
+
+
+
+
+
+
+19 accomplished

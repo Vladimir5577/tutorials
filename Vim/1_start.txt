@@ -298,20 +298,89 @@ type 'q'. Check ':reg a'.
 
 
 
-lldffjjd2asdfas
-3asdfa
-asdf
-1asdf
-2
-34
-234
+---------------------------------------------------------
 
-bla
+Visual Mode
 
-ASDF ck jksdfjkkkjj  asdfasdfa~~~~jjj~hhi
+---------------------------------------------------------
 
-hELLO wORLD
+v  ---  start visual mode
+V  ---  highlight line in the cursor position
+o  ---  navigate from top to bottom in highlighten text
 
-23 accomplished
+Ctrl+v ---  to select a block (horizontal and wertical selection)
+
+Start visual mode 'v' then highlight text vith navigation. Then we can copy or delete.
+
+Ctrl+v - start select then choose a block of the text, to change type 'c' then text and 'Esc'.
+Whole text should be change.
+
+
+
+---------------------------------------------------------
+
+Settings
+
+--------------------------------------------------------- 
+
+
+~/.vimrc --- file sellings
+:set numger? --- to check working command or not
+
+:h options-list  ---  to see list all of commands
+:options  ---  to see all of commands
+
+:color <Tab> --- change color 
+:colorscheme <Tab>  --- - ---
+
+map KEY KEYSTROKE
+
+
+
+--------------------------------------------------------- 
+
+Vim Windows
+
+--------------------------------------------------------- 
+
+:sp      ---  split the window horizontally
+Ctrl-ws  --- split the window horizontally 
+
+:vs     ---  split window vertically (:vsplit)
+Ctrl-wv --- split window vertically 
+
+
+:sp index.txt  ---  open a file in split window
+:vs index.txt  ---  open a file in split window
+Ctrl-ww        ---  navigate beetwen window
+
+Ctrl-wr  --- rotate windows
+Ctrl-wR  --- rotate in opposite
+
+Ctrl-wh  ---  to move left window
+Ctrl-wj  --- down
+Ctrl-wk  --- up
+Ctrl-wl  --- right
+Ctrl-w=  --- make every window equal
+
+Ctrl-w+ ---  increase hight
+Ctrl-w- ---  decrease hight
+Ctrl-w> ---  increase width
+Ctrl-w< ---  decrease width
+
+:ls  ---  show buffer
+
+
+:q      ---  close the window
+Ctrl-wq --- close the window
+
+:on  --- close every window except current (:only)
+
+We can split on multiple part
+
+:h ctrl-w  ---  help
+
+=========================================================================
+
 
 

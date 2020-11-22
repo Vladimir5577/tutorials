@@ -1,0 +1,11 @@
+The Facade Pattern
+The Adapter Pattern
+The Decorator Pattern
+The Strategy Pattern
+The Factory Pattern
+The Command Pattern
+The Observer Pattern
+The Singleton Pattern
+The Active Record Pattern
+The Prototype Patterncho 
+

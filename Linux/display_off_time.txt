@@ -1,3 +1,5 @@
 gsettings set org.gnome.desktop.session idle-delay 1800
 
 1800 sekund  =  30 minut
+
+xset -display :0 s off -dpms

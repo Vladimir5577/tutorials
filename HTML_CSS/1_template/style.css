@@ -93,7 +93,9 @@ p {
 	justify-content: center;
 	height: 750px;
 	padding-top: 100px;
-	/*background: #31344e url('/img/intro') center no-repeat / cover;*/
+	/*background: #31344e url('/img/intro') center no-repeat;
+	background-size: cover;
+	*/
 	background-color: #31344e;
 }
 
@@ -140,6 +142,7 @@ p {
 	font-weight: 600;
 	text-transform: uppercase;
 	text-decoration: none;
+	text-align: center;
 
 	transition: background .1s linear;
 }
@@ -150,6 +153,10 @@ p {
 
 .btn--red {
 	background-color: #dd3434;
+}
+
+.btn--long {
+	min-width: 280px;
 }
 
 
@@ -211,6 +218,7 @@ p {
 }
 
 .works_photo {
+	min-width: 100%;
 	position: absolute;
 	top: 50%; 
 	left: 50%;
@@ -309,6 +317,11 @@ p {
 	display: flex;
 }
 
+.social--footer {
+	justify-content: center;
+
+}
+
 .social_item {
 	display: flex;
 	justify-content: center;
@@ -325,6 +338,315 @@ p {
 }
 
 
+/* Reviews
+=======================================*/
+
+.reviews {
+	background-color: #53354a;
+	overflow: hidden;
+}
+
+.reviews_item {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.reviews_photo {
+	width: 50%;
+	height: 500px;
+	position: relative;
+}
+
+.reviews_img {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+/*
+	top: 0;
+	transform: translate(-50%);*/  /*if image too big*/
+}
+
+.reviews_content {
+	width: 50%;
+	padding-left: 80px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.reviews_text {
+	font-family: sans-serif;
+	font-style: italic;
+	font-size: 36px;
+	line-height: 1.2;
+	color: #fff;
+	margin-bottom: 20px;
+}
+
+.reviews_author {
+	font-size: 13px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+
+/* Download
+=======================================*/
+
+
+.download {
+	margin: 90px 0;
+	text-align: center;
+}
+
+.download_title {
+	font-size: 28px;
+	color: #2d3033;
+	font-weight: 300;
+	margin-bottom: 10px;
+}
+
+.download_text {
+	font-size: 13px;
+	color: #2d3033;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+}
 
 
 
+/* Footer
+=======================================*/
+
+.footer {
+	background-color: #3a3e64;
+}
+
+.footer_inner {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 70px 0;
+}
+
+.footer_block {
+	width: 33.333%;
+	text-align: center;
+	padding: 0 15px;
+}
+
+.footer_title {
+	font-size: 14px;
+	font-weight: 700;
+	color: #fff;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+.footer_address {
+	font-style: normal;
+	font-size: 14px;
+	line-height: 1.5;
+	color: rgba(255, 255, 255, .5);
+}
+
+.footer_text {
+	font-size: 14px;
+	line-height: 1.5;
+	color: rgba(255, 255, 255, .5);
+}
+
+.copyright {
+	padding: 20px;
+	background-color: #313454;
+}
+
+.copyright_text {
+	text-align: center;
+	font-size: 14px;
+	color: #808080;
+	line-height: 1.5;
+}
+
+.copyright_text span {
+	color: #fff;
+}
+
+/* Burger */
+
+.burger {
+	display: none;
+	background:none;
+	border: 0;
+	padding: 15px 0;
+	cursor: pointer;
+}
+
+.burger_item {
+	display: block;
+	width: 30px;
+	height: 3px;
+	background-color: #fff;
+
+	font-size: 0;
+	color: transparent;
+	position: relative;
+	cursor: pointer;
+}
+
+.burger_item:before,
+.burger_item:after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	background-color: #fff;
+	z-index: 1;
+}
+
+.burger_item:before {
+	top: -8px;
+}
+
+.burger_item:after {
+	bottom: -8px;
+}
+
+/* Media
+=======================================*/
+
+@media (max-width: 1300px) {
+	/* Works */
+	.works_item {
+		width: 50%;
+	}
+}
+
+@media (max-width: 991px) {
+
+	/* Nav */
+	.nav {
+		display: none;
+	}
+
+	/* Burger */
+	.burger {
+		display: block;
+	}
+
+	/* intro */
+	.intro_title {
+		font-size: 40px;
+	}
+
+	/* Features */
+	.features {
+		margin: 40px 0;
+	}
+
+	.features_item {
+		width: 50%;
+	}
+
+	/* Team */
+	.team_item {
+		width: 50%;
+		text-align: center;
+	}
+
+	.team_photo {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.social {
+		justify-content: center;
+	}
+
+	/* Reviews */
+	.reviews_content {
+		width: 100%;
+		padding: 15px;
+	}
+
+	.reviews_photo {
+		width: 100%;
+		margin: 15px 0;
+		/*padding: 15px;*/
+
+	}
+
+	.reviews_img {
+		justify-content: center;
+	}
+}
+
+
+@media (max-width: 767px) {
+
+	.intro {
+		height: auto;
+		padding-top: 130px;
+		padding-bottom: 30px;
+	}
+
+	.intro_title {
+		font-size: 30px;
+	}
+
+	.intro_subtitle {
+		font-size: 16px;
+		margin-bottom: 30px;
+	}
+
+	/* Features */
+	.features_item {
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	/* Works */
+	.works_item {
+		width: 100%;
+	}
+
+	/* Team */
+	.team {
+
+	}
+
+	.team_item {
+		width: 100%;
+		text-align: center;
+	}
+
+	/* Reviews */
+	.reviews_text {
+		font-size: 25px;
+	}
+
+	.btn--long {
+		min-width: 260px;
+	}
+
+	/* Footer */
+	.footer_inner {
+		padding: 30px 0;
+	}
+
+	.footer_block {
+		width: 100%;
+		margin-bottom: 30px;
+	}
+
+	.footer_block:last-child {
+		margin-bottom: 0;
+	}
+}
+  
