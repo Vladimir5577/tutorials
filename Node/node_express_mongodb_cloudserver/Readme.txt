@@ -29,3 +29,7 @@ Create file index.js.
 To run app 
 
 	$ npm run dev
+
+In the browser type
+
+	localhost:3000

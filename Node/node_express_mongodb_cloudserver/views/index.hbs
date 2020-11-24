@@ -7,21 +7,41 @@
 	<ul>
 		{{#each todos}}
 			<li class="todo">
-				<form action="/complete" method="POST">
-					<label>
-						{{#if completed}}
-							<input type="checkbox" checked name="completed">
-							<span class="completed">{{this.title}}</span>
-						{{else}}
-							<input type="checkbox" name="completed">
-							<span>{{this.title}}</span>
-						{{/if}}
+				<label>
+					
+					<div class="display_item">
+						<form action="/complete" method="POST">
+								{{#if completed}}
+									<input type="checkbox" checked name="completed">
+									<span class="completed">{{this.title}}</span>
+								{{else}}
+									<input type="checkbox" name="completed">
+									<span>{{this.title}}</span>
+								{{/if}}
 
-						<input type="hidden" name="id" value="{{this._id}}">
-						
-						<button type="submit" class="btn btn-small">Save</button>
-					</label>
-				</form>			
+								<input type="hidden" name="id" value="{{this._id}}">
+								
+								<button type="submit" class="btn btn-small btn_save">Save</button>
+						</form>		
+					</div>
+
+					<!-- Update -->
+					<div class="delete_item">
+						<form action="/edit" method="POST">
+							<input type="hidden" name="id" value="{{this._id}}">
+							<button type="submit" class="btn btn-small">Update</button>
+						</form>
+					</div>&nbsp;&nbsp;
+
+					<!-- Delete -->
+					<div class="delete_item">
+						<form action="/delete" method="POST">
+							<input type="hidden" name="id" value="{{this._id}}">
+							<button type="submit" class="btn btn-small">Delete</button>
+						</form>
+					</div>
+
+				</label>
 			</li>
 		{{/each}}
 	</ul>

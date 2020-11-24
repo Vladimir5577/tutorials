@@ -1,5 +1,6 @@
 .todo {
 	margin-bottom: 1rem;
+	display: inline;
 }
 
 .todo span.completed {
@@ -11,9 +12,20 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+
 	cursor: pointer;
 	background: #f3f3f3;
 	padding: 1rem;
+}
+
+.display_item {
+	width: 100%;
+	position: relative;
+}
+
+.display_item form button {
+	position: absolute;
+	right: 10px;
 }
 
 .todo i {

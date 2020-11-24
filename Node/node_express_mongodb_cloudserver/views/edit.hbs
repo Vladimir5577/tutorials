@@ -1,0 +1,13 @@
+<h2>Edit todo</h2>
+
+{{ todo }}
+
+<form action="/update" method="POST">
+	<div class="input-field">
+		<input type="hidden" name="id" value="{{ todo._id }}">
+		<input type="text" name="title" value="{{ todo.title }}">
+		<label>Todo title</label>
+	</div>
+
+	<button type="submit" class="btn">Edit</button>
+</form>

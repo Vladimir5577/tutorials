@@ -4,7 +4,6 @@ const router = Router();
 
 router.get('/', async (req, res) => {
 	const todos = await Todo.find({});
-	console.log(todos[0].toJson());
 
 	res.render('index', {
 		title: 'Todos list',
@@ -24,10 +23,37 @@ router.post('/create', async (req, res) => {
 
 	const todo = new Todo({
 		title: req.body.title,
-		completed: true
+		completed: false
 	});
 
 	await todo.save();
+
+	res.redirect('/');
+});
+
+// delete
+router.post('/delete', async (req, res) => {
+	// console.log(req.body.id);
+	const todo = await Todo.findById(req.body.id);
+	// console.log(todo);
+
+	await todo.delete();
+
+	res.redirect('/');
+});
+
+// edit
+router.post('/edit', async (req, res) => {
+	const todo = await Todo.findById(req.body.id);
+	res.render('edit', {
+		todo: todo.toJson()
+	});
+});
+
+// update
+router.post('/update', async (req, res) => {
+	// console.log(req.body.id);
+	const todo = await Todo.findByIdAndUpdate({ _id: req.body.id }, { title: req.body.title });
 
 	res.redirect('/');
 });
