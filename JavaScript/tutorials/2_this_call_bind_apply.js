@@ -47,7 +47,7 @@ function multBy (arr, n) {
 	});
 }
 
-console.log(array, 5);
+console.log(multBy(array, 5));
 
 console.log('------- prototype ------------------------------');
 
