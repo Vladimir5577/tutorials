@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+
+	<h1>Learn Ajax</h1>
+
+	<button class="btn btn-primary btn_get_posts">Get Posts</button>
+	<button class="btn btn-danger btn_add_post">Send Post</button>
+
+	<div class="container"></div>
+
+	<script type="text/javascript">
+
+		const btn = document.querySelector('.btn_get_posts');
+		const btnAddPost = document.querySelector('.btn_add_post');
+		const container = document.querySelector('.container');
+
+		// Get data  **************************************************
+		function getPosts (callBack) {
+			const xhr = new XMLHttpRequest();
+			xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts');
+			xhr.addEventListener('load', () => {
+				const response = JSON.parse(xhr.response);
+				callBack(response);
+			});
+
+			xhr.addEventListener('error', () => {
+				console.log('Something went wrong');
+			});
+
+			xhr.send();
+		}
+
+		btn.addEventListener('click', (event) => {
+			getPosts((response) => {
+				const fragment = document.createDocumentFragment();
+				response.forEach(post => {
+					const card = document.createElement('div');
+					card.classList.add('card');
+					const cardBody = document.createElement('div');
+					cardBody.classList.add('card-body');
+					const title = document.createElement('h3');
+					title.classList.add('card-title');
+					title.textContent = post.title;
+					const article = document.createElement('p');
+					article.classList.add('card-text');
+					article.textContent = post.body;
+
+					cardBody.appendChild(title);
+					cardBody.appendChild(article);
+					// console.log(cardBody);
+					card.appendChild(cardBody);
+					fragment.appendChild(card);
+				});
+
+				container.appendChild(fragment);
+			});
+		});
+		
+
+		// Post request  *************************************************
+		function createPost (body, callBack) {
+			const xhr = new XMLHttpRequest();
+			xhr.open('POST', 'https://jsonplaceholder.typicode.com/posts');
+			xhr.addEventListener('load', () => {
+				const response = JSON.parse(xhr.response);
+				callBack(response);
+			});
+
+			xhr.setRequestHeader('Content-type', 'application/json; charset=UTF-8');
+
+			xhr.addEventListener('error', () => {
+				console.log('Something went wrong');
+			});
+
+			xhr.send(JSON.stringify(body));
+			console.log(JSON.stringify(body));
+		}
+
+		btnAddPost.addEventListener('click', e => {
+			const newPost = {
+				title: 'foo',
+				body: 'bar',
+				userId: 1,
+			};
+			createPost(newPost, response => {
+				console.log(response);
+			});
+		});
+
+		
+	</script>
+
+</body>
+</html>
+
+
+<!-- 
+Pattern for bootstrap
+
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div> 
+
+-->
