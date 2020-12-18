@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fetch</title>
+</head>
+<body>
+
+	<h1>Fetch Request</h1>
+
+	<script type="text/javascript">
+		
+		fetch('http://62.173.140.14/data.php', {
+			method: 'POST',
+			headers : {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({
+				name: 'User - 1'
+			})
+		})
+			.then(res => res.json())
+			.then(data => console.log(data))
+			.catch(error => console.log('Error'));
+
+
+
+	</script>
+
+</body>
+</html>
