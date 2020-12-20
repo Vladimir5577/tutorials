@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+   	<title></title>
+</head>
+<body>
+
+	<div>
+		<span id="hi" data-test="this is a test" class="hi1 hi2">Hello</span>
+		<span id="bye">Bye</span>
+	</div>
+
+
+<script>
+
+/*
+	const body = document.body;
+	// body.append('Hello World', 'Hi');
+
+	const div = document.createElement('div');
+	// div.innerText = 'Hello World'; 
+	// div.textContent = 'Hello 132';
+
+	// 1 way to add html
+	// div.innerHTML = '<h1>Hello World</h1>';
+
+	// 2 way to add html (better)
+	const strong = document.createElement('strong');
+	strong.innerText = 'Hello World';
+	div.append(strong);
+
+	body.append(div);	// or appendChild
+*/
+
+	const body = document.body;
+	const div = document.querySelector('div');
+	const spanHi = document.querySelector('#hi');
+	const spanBye = document.querySelector('#bye');
+
+/*
+	// to remove
+	spanBye.remove();
+
+	// then append
+	div.append(spanBye);
+
+	div.removeChild(spanHi); // or spanHi.remove();
+*/
+
+
+	console.log(spanHi.id);	   // hi
+
+	console.log(spanHi.getAttribute('id')); // hi
+	spanHi.setAttribute('id', 'newId'); // set new id attr
+	// spanHi.id = 'anotherId';
+	console.log(spanHi.getAttribute('id')); // newId
+
+	// to remove attribute
+	spanHi.removeAttribute('title');
+
+	console.log(spanHi.dataset.test);
+	spanHi.dataset.newName = 'Hi';
+ 	
+ 	// work with classes
+ 	spanHi.classList.add('new_class');
+ 	spanHi.classList.remove('hi1');
+ 	spanHi.classList.toggle('hi2'); // remove if exist or added
+ 	spanHi.classList.toggle('hi2', true); // added or false to remove
+
+ 	// work with css
+ 	spanHi.style.color = 'red';
+ 	spanHi.style.backgroundColor = 'green';
+
+
+</script>
+
+
+        
+</body>
+</html>

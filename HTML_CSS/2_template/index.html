@@ -4,6 +4,7 @@
 	<title>My Shop</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -15,16 +16,17 @@
 					<!-- <img class="logo_img" src="images/img_2.svg"> -->
 					<h1>My <span style="color: red;">Shop</span></h1>
 				</div>
-				<nav>
-					<ul>
+				<nav class="navbar_nav" >
+					<ul id="MenuItems">
 						<li><a href="">Home</a></li>
-						<li><a href="">Product</a></li>
+						<li><a href="products.html">Product</a></li>
 						<li><a href="">About</a></li>
 						<li><a href="">Contact</a></li>
 						<li><a href="">Account</a></li>
 					</ul>
-					<img src="images/cart.svg" width="30px" height="30px">
 				</nav>
+				<img src="images/cart.svg" width="30px" height="30px">
+				<img src="images/burger_menu.svg" class="menu-icon" onclick="menutoggle()">
 			</div>
 			<div class="row">
 				<div class="col-2">
@@ -310,7 +312,56 @@
 	</div>
 	
 
-	<h1>55 min </h1>
+<!-- **** Footer ******************** -->
+
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+
+				<div class="footer-col-1">
+					<h3>Download Our App</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+				</div>
+
+				<div class="footer-col-2">
+					<h3>Download Our App</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur.</p>
+				</div>
+
+				<div class="footer-col-3">
+					<h3>Download Our App</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+					<ul>
+						<li>Home</li>
+						<li>About</li>
+						<li>Lorem</li>
+						<li>Links</li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+
+	<script type="text/javascript">
+		var MenuItems = document.getElementById('MenuItems');
+
+		MenuItems.style.maxHeight = '0px';
+
+		function menutoggle () {
+			if (MenuItems.style.maxHeight == '0px') {
+				MenuItems.style.maxHeight = '800px';
+			} else {
+				MenuItems.style.maxHeight = '0px';
+			}
+		}
+	</script>
 
 </body>
 </html>

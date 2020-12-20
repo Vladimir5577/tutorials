@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+
+	<button id="myid">Click me</button>
+
+	<script>
+		
+		/*
+			Debounce method do not execute when invoke, it wait for pause over 
+			a configuration titme before executing, if the same method is called
+			again and again the previous is cancelled, the time restart.
+		*/
+
+		const debounce = (callBack, delay) => {
+			let timeoutId;
+			return function (...args) {
+	
+				if (timeoutId) {
+					clearTimeout(timeoutId);
+				}
+
+				timeoutId = setTimeout( () => {
+					callBack(...args);
+				}, delay);
+			};
+		};
+	
+		document.getElementById('myid').addEventListener('click', debounce(e => {
+			console.log('Clicked');
+		}, 2000));
+	
+	
+	</script>
+        
+</body>
+</html>

@@ -24,10 +24,10 @@ function sort (arr) {
 	}
 
 	const smallerElementSortedArray = sort(smallerElementsArray);
-	const biggerElementsSortedArray = sort(biggestElementsArray);
+	const biggerElementSortedArray = sort(biggestElementsArray);
 	return smallerElementsArray.concat(
 		centerElementsArray,
-		biggerElementsSortedArray
+		biggerElementSortedArray
 	);
 }
 
