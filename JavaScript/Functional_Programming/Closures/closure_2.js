@@ -1,5 +1,5 @@
 const createCounter = () => {
-	let count = 0
+	let count = 0;
 
 	return {
 		increment () {
@@ -11,8 +11,8 @@ const createCounter = () => {
 		get () {
 			return count
 		}
-	}
-}
+	};
+};
 
 const counter = createCounter();
 counter.increment();
