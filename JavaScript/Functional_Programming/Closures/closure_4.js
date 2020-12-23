@@ -9,8 +9,8 @@
 const createTipper = (baseTip) => {
 	return (amount) => {
 		return baseTip * amount;
-	}
-}
+	};
+};
 
 const tip20 = createTipper(.2);
 const tip30 = createTipper(.3);

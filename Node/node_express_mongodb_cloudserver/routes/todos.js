@@ -32,9 +32,9 @@ router.post('/create', async (req, res) => {
 });
 
 // delete
-router.post('/delete', async (req, res) => {
+router.get('/delete/:id', async (req, res) => {
 	// console.log(req.body.id);
-	const todo = await Todo.findById(req.body.id);
+	const todo = await Todo.findById(req.params.id);
 	// console.log(todo);
 
 	await todo.delete();
@@ -43,8 +43,8 @@ router.post('/delete', async (req, res) => {
 });
 
 // edit
-router.post('/edit', async (req, res) => {
-	const todo = await Todo.findById(req.body.id);
+router.get('/edit/:id', async (req, res) => {
+	const todo = await Todo.findById(req.params.id);
 	res.render('edit', {
 		todo: todo.toJson()
 	});

@@ -192,7 +192,7 @@ Fb --- to search 'b' letter backward from cursor
 
 fa --- to search 'a' letter and press ';' to continue and ',' to opposite direction
 
-ta --- to put cursor before 'a' letter, to continue press ':' 
+ta --- to put cursor before 'a' letter, to continue press ';' 
 Ta --- to put cursor after 'a' letter, to continue press ','
 
 cw --- to replace the word

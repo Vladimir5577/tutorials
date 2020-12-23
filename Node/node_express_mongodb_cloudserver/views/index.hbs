@@ -27,18 +27,12 @@
 
 					<!-- Update -->
 					<div class="delete_item">
-						<form action="/edit" method="POST">
-							<input type="hidden" name="id" value="{{this._id}}">
-							<button type="submit" class="btn btn-small">Update</button>
-						</form>
+							<a href="/edit/{{this._id}}" class="btn btn-small">Update</a>
 					</div>&nbsp;&nbsp;
 
 					<!-- Delete -->
 					<div class="delete_item">
-						<form action="/delete" method="POST">
-							<input type="hidden" name="id" value="{{this._id}}">
-							<button type="submit" class="btn btn-small">Delete</button>
-						</form>
+							<a href="/delete/{{this._id}}" type="submit" class="btn btn-small">Delete</a>
 					</div>
 
 				</label>
