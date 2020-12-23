@@ -22,12 +22,12 @@
 		echo "Post added successfully";
 	}
 
-	// // get data
-	// $sql = "SELECT * FROM users";
-	// $stmt = $conn->prepare($sql);
-	// $stmt->execute();
-	// $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-	// echo json_encode($result);
+	// get data
+	$sql = "SELECT * FROM users";
+	$stmt = $conn->prepare($sql);
+	$stmt->execute();
+	$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	echo json_encode($result);
 
 
 
