@@ -28,3 +28,13 @@ class Server {
 
 const aws = new Server('AWS German', '83.23.45.53');
 console.log(aws.getUrl());
+
+/*
+	 Instantiation of a function with 'new' keywords
+		1 - create {} - empty object
+		2 - asign 'this' to empty object
+		3 - return 'this' key word
+		4 - asign 'this' to a wariable
+
+	Call a function without 'new' will return undefined 
+*/

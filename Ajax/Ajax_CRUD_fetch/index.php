@@ -10,7 +10,7 @@
 	<button id="get_data">Get Data</button>
 	<br><br>
 
-	<form id="form" method="POST" onsubmit="foo()">
+	<form id="form_data" method="POST" onsubmit="foo()">
 		<label>Name</label>
 		<input type="text" name="name" id="name_input">
 		<label>Country</label>
@@ -18,7 +18,18 @@
 		<input type="submit" name="submit">
 	</form>
 
-	<div id="container"></div>
+<div id="container"></div>
+
+	<table border="4" cellspacing="0" cellpadding="8">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>Country</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
 
 
 	<script type="text/javascript">
@@ -39,27 +50,17 @@
 
 		// append data to HTML
 		function putDataInHTML (data) {
-			const fragment = document.createDocumentFragment();
-				data.forEach(post => {
-					const card = document.createElement('div');
-					card.classList.add('card');
-					const cardBody = document.createElement('div');
-					cardBody.classList.add('card-body');
-					const title = document.createElement('h3');
-					title.classList.add('card-title');
-					title.textContent = post.name;
-					const article = document.createElement('p');
-					article.classList.add('card-text');
-					article.textContent = post.country;
-
-					cardBody.appendChild(title);
-					cardBody.appendChild(article);
-					// console.log(cardBody);
-					card.appendChild(cardBody);
-					fragment.appendChild(card);
+			const tbody = document.querySelector('tbody');
+				data.forEach(user => {
+					const tr = document.createElement('tr');
+					tr.innerHTML = `
+							<td>${user.id}</td>
+							<td>${user.name}</td>
+							<td>${user.country}</td>
+						`;
+					tbody.append(tr);
 				});
 
-				container.appendChild(fragment);
 				console.log(data);
 		}
 
@@ -74,6 +75,7 @@
 		}
 
 		function sendPostForm () {
+			let form_data = document.getElementById('form_data');
 			let name_input = document.getElementById('name_input').value;
 			let country_input = document.getElementById('country_input').value;
 			console.log(name_input, country_input);
@@ -90,6 +92,7 @@
 				.catch(error => console.log('Error has occur'));
 
 			getData();
+			form_data.reset();
 		}
 
 		// console.log(document.getElementById('name_input').value);
