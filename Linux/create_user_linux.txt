@@ -1,0 +1,11 @@
+To create user
+
+	$ adduser bob
+
+Then type password
+
+Then need to give privilege
+
+	$ adduser bob sudo
+
+
