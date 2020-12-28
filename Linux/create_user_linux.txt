@@ -1,11 +1,12 @@
 To create user
 
-	$ adduser bob
+	$ sudo adduser bob
+
 
 Then type password
 
-Then need to give privilege
+Delete user 
 
-	$ adduser bob sudo
+	$ sudo userdel bob
 
 
