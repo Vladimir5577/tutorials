@@ -9,6 +9,7 @@ set number
 set mouse=a
 set incseatch
 set hlsearch
+colo ron      --- color by default
 
 inoremap ( ()<left>  - for autocompletion
 inoremap { {}<left>
