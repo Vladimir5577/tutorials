@@ -11,4 +11,9 @@ Deploy
 
 php artisan deploy staging -o branch=BRANCH_NAME
 
+ 
+mysqldump -u user -ppassword apartments-moscow  > dump.sql  // dump database to the file
+scp apartments-moscow@6rs.ru:~/dump.sql .  // copy a file from the server
+
+
 
