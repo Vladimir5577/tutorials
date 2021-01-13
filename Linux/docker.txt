@@ -1,0 +1,38 @@
+$ cat /etc/*release*  --- to see Linux version
+
+Install docker (Install using the convenience script) :
+
+	$ curl -fsSL https://get.docker.com -o get-docker.sh
+	$ sudo sh get-docker.sh
+
+To see the docker version:
+
+	$ sudo docker version
+
+Install package from https://hub.docker.com
+	
+Install first image:
+		$ docker run docker/whalesay cowsay Hello World From Docker
+
+Commands:
+	
+	1. run 
+		$ docker run  nginx  ---  will run image or download it if it is doesn't exist on the computer
+	2. ps
+		$ docker ps		 ---  list all runnings containers
+		$ docker ps -a 	 ---  list whole containers	
+	3. stop
+		$ docker stop nginx  
+	4. rm --- remove a container
+		$ docker rm silly_samme
+	5. images  ---  list images
+		$ docker images
+	6. rmi  ---  remove images --- delete all dependent container to remove image
+		$ docker rmi nginx
+	7. pull  ---  download an image but not run the container
+		$ docker pull nginx
+	8. exec  --- exicute a command
+		$ docker exec ....
+	9. run - attach and detach
+
+https://www.youtube.com/watch?v=fqMOX6JJhGo&ab_channel=freeCodeCamp.org
