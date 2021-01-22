@@ -35,3 +35,32 @@ Commands:
 		$ docker exec ....
 	9. run - attach and detach
 
+
+===========================================================================================
+
+$ docker run php:7.2-apache-stretch php --version
+$ docker ps  ---  to see running container
+$ docker ps -a  ---  to see all images
+$ docker images | grep php  ---  to see every php images
+
+$ docker build -t phpinfo:latest .
+$ docker run -it --rm phpinfo bash --- to get inside container
+$ docker run -p 8080:80 --rm phpinfo
+$ docker run -p 8080:80 -d phpinfo ---  to run in detach mode
+$ docker logs -f <containerId>  ---  to see logs
+$ docker start <containerId>    ---  to start a container
+$ docker -rm <containerId>	---  to remove a container
+
+
+==================================================================
+
+Build from docker-compose.yml
+
+$ docker-compose up --build
+$ docker-compose up -d --build  --- to run in detach mode
+$ docker-compose rm     		--- remove build container in the current folder
+$ docker-compose ps  			--- info about container
+$ docker-compose restare		--- restart container
+$ docker-compose up			--- start containers
+$ docker-compose down			--- stop every containers
+$ docker exec -it <containerId> bash  --- get into container
