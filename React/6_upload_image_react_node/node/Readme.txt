@@ -1,20 +1,37 @@
-Create package.json file
+To install project (node module) type 
+	
+	$ npm i
+
+================================================
+
+Create project folder and install in the project folder: 
 
 	$ npm init -y
-	$ npm i express express-fileupload
-	$ npm i -D nodemon concurrently  --- to run node with react --- (not working)
 
-Add to package.json 
+	$ npm install express mongoose
 
+	$ npm i express-fileupload
+
+	$ npm i -D nodemon
+
+	$ npm install cors
+
+In package.json file in 'scripts' add
+	
+	...
 	"scripts": {
-	    "start": "node index.js",
-	    "server": "nodemon index.js",
-	    "client": "npm start --prefix client",
-	    "dev": "concurrently \"npm run server\" \"npm run client"
-	  },
+		...
+		"start": "node index",
+  		"dev": "nodemon index"
+	},
+	...
 
-Create index.js
+Create file index.js.
 
-Run app
+To run app 
 
-	$ npm run server
+	$ npm run dev
+
+In the browser type
+
+	localhost:3000
