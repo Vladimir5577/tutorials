@@ -18,5 +18,5 @@ Before building add to 'package.json' homepage property with future url:
 
 Build the project: 
 
-	$ yarn builds
+	$ yarn builds // or sudo npm run build
 

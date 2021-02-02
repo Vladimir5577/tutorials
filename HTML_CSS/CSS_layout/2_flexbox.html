@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flexbox</title>
+	<style type="text/css">
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		.parent {
+			height: 100vh;
+			border: 20px solid rgb(0, 0, 0);
+			display: flex;
+			/*justify-content: space-around; horizontal*/
+			/*align-items: center;	verticaly*/
+			/*flex-direction: column; for vertical location */
+			/*flex-wrap: wrap; */
+			/*align-content: flex-start;  to make wrap with next line*/
+		}
+
+		.child1 {
+			/*width: 200px;*/
+			height: 200px;
+			background: rgb(39, 61, 134);
+			/*flex-grow: 2; */ /* to grow div for the rest white space */
+			/*flex-basis: 200px; */ /* like width */ 
+			/*flex --- will combine flex-grow, flex-shrink, flex-basis */
+			/*flex: 1;*/
+		}
+
+		.child2 {
+			width: 200px;
+			height: 200px;
+			background: rgb(172, 57, 53);
+			/*flex-grow: 1; */ /* to grow div for the rest white space */
+		}
+
+		.child3 {
+			width: 200px;
+			height: 200px;
+			background: rgb(149, 43, 140);
+		}
+
+		.child4 {
+			width: 200px;
+			height: 200px;
+			background: rgb(39, 200, 44);
+		}
+	</style>
+</head>
+<body>
+
+	<div class="parent">
+		<div class="child1">
+			<h1>Hello</h1>
+		</div>
+		<div class="child2">
+			<p>Hello</p>
+		</div>
+		<div class="child3"></div>
+		<div class="child4"></div>
+	</div>
+
+</body>
+</html>

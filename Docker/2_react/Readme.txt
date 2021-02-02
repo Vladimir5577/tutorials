@@ -21,12 +21,16 @@ Build the project:
 	$ yarn builds
 ============================================================
 
+Create 'Dockerfile'.
+
 Docker 
 
 	$ docker build . -t react_app
-	$ docker run --rm -it -p 9000:3000/tcp react_app 	        ---  only for run
-	$ docker run -it -p 9000:3000 -v $(pwd):/app/src react_app  ---  for run and changes
+	$ docker run s 	        ---  only for run
+	$ ker docker run -it -p 9000:3000 -v $(pwd):/app/src react_app   ---  for run and changesudo
 
 To get inside docker
 
 	$ docker run -i -t --entrypoint /bin/bash <image Id>
+	$ sudo docker exec -it <image id> sh
+

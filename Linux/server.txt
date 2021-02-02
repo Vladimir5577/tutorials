@@ -1,0 +1,7 @@
+Config file 
+
+	$ /etc/apache2/sites-available/
+
+To restart server 
+
+	$ restart apache2

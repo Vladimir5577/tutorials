@@ -1,0 +1,55 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "Json server",
+      "authorId": 2
+    },
+    {
+      "id": 2,
+      "title": "React js",
+      "authorId": 2
+    },
+    {
+      "email": "mike@mike.com",
+      "password": "mike",
+      "id": 3
+    },
+    {
+      "name": "Jack",
+      "countyr": "Italy",
+      "job": "programmer",
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "Good article",
+      "articleId": 1
+    },
+    {
+      "id": 2,
+      "body": "Perfect",
+      "articleId": 2
+    },
+    {
+      "name": "Jack",
+      "countyr": "Italy",
+      "job": "programmer",
+      "id": 3
+    }
+  ],
+  "author": [
+    {
+      "id": 1,
+      "username": "Json server",
+      "title": "Random test 3"
+    },
+    {
+      "id": 2,
+      "username": "React js",
+      "title": "Random test 4"
+    }
+  ]
+}

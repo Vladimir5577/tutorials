@@ -1,0 +1,45 @@
+//======================================================
+
+Settings for the keybord
+
+	$ xset r rate 370 10
+
+This gives it a delay of 0.370 seconds before the repeating, and does 10 repeats per second.
+
+
+//======================================================
+
+Yarn install
+
+	$ npm install --global yarn
+
+//=======================================================
+
+For sublime to exclude node modules from search
+
+	Preferences -> Setting -> then add following
+
+	"binary_file_patterns":
+	[
+		"node_modules/",
+		"*.jpg",
+		"*.jpeg",
+		"*.png",
+		"*.gif",
+		"*.ttf",
+		"*.tga",
+		"*.dds",
+		"*.ico",
+		"*.eot",
+		"*.pdf",
+		"*.swf",
+		"*.jar",
+		"*.zip"
+	],
+
+//=======================================================
+
+Number of watch files
+
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+
