@@ -1,0 +1,22 @@
+1. Create Linux user
+
+	$ sudo adduser username  
+
+2. Add user to the group www-data:
+
+	$ sudo adduser username www-data
+
+3. Create a folder for our project and give a permission
+
+	$ sudo mkdir project 
+	$ sudo chown -R username:www-data project
+	$ sudo chmod -R g+rw project
+	$ sudo find project -type d -print0 | sudo xargs -0 chmod g+s
+
+4. Give access lo login on the server with ssh
+	
+	* on out local mashine getting ssh key
+	$ cat ~/.ssh/id_rsa.pub
+
+	* copy this key on the server in folder
+	~/.ssh/authorized_keys

@@ -43,3 +43,12 @@ Number of watch files
 
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 
+//=======================================================
+
+Linux give permission to the user
+	
+	$ sudo mkdir folder1
+	$ sudo chown username:username folder1
+	$ sudo chmod 750 folder1
+
+

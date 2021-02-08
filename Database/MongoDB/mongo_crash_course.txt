@@ -27,6 +27,8 @@ db.customers.find(); --- find all record from the collection
 
 db.customers.find().pretty();  ---  to show in readable format
 
+db.costomers.count();	---   count records
+
 db.customers.update({first_name: "Bob"}, {first_name: "New Bob", last_name: "New", age: 24}); --- update with match name 
 
 db.customers.update({first_name: "Bob"}, {$set:{gender: "male"}}); --- keep previous and add new caracter to the record with $set

@@ -1,0 +1,57 @@
+$ git --version		---   check git version
+
+$ git init   ---   initialize git repository
+
+	$ ls -a  ---  check a git repository (it is hidden)
+
+$ git status  --- to see status of current project
+
+$ git cofig -l  	 --- to see configuration
+
+$ git config --list	 --- to see configuration
+
+$ git config --global user.name "Bob"   ---  set global name config
+
+$ git config --global user.email "bob@bob.com"   ---  set global email config
+
+$ git remote add origin http://github.com/path/to/directory   --- add path to the directory
+
+$ git remote -v   ---  to chech remote directory
+
+$ git add .   --- to add every changes and unrtacked files
+
+$ git commit -m "first commit"   ---  add commit message
+
+$ git push origin -u master   --- push project to master branch (for the first time)
+
+$ git push origin master 	 ---  push to master branch
+
+$ git commit -am "message here"   ---  means git add . and commit (short version)
+
+$ git branch new_branch  ---  create branch (without switchign on it)
+
+$ git branch   ---  check every branches (and see current)
+
+$ git checkout new_branch   ---  switch to "new_branch"
+
+$ git branch -D new_branch   ---  delete the branch "new_branch"
+
+$ git branch -b new_branch   ---  create a branch and switch to it (from current branch)
+
+$ git push origin new_branch  ---  push to new_branch
+
+$ git pull  ---  to pull from maseter
+
+$ git merge new_branch   ---  to merge a "new_branch" to current branch that we working on
+
+$ git clone https://github.com/path/to/directory   ---  clone from github
+
+$ git branch -a   ---  to see evety remote and local branches 
+
+$ git checkout new_branch   ---  to pull remote branch and switch to it
+
+$ git push origin --delete new_branch   ---  delete a branch remotely (on github)
+
+
+
+	12 accomplihs
