@@ -53,5 +53,5 @@ $ git checkout new_branch   ---  to pull remote branch and switch to it
 $ git push origin --delete new_branch   ---  delete a branch remotely (on github)
 
 
-
-	12 accomplihs
+$ git reset --hard  ---  to delete all of changes
+$ git clean -f -d   ---  to delete all untracked files and direcrories
