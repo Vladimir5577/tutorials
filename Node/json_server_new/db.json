@@ -1,0 +1,46 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "Post One 132",
+      "body": "asdfasdfaLorem ipsum dolor sit amet 123",
+      "publishedAt": "2021-02-27"
+    },
+    {
+      "id": "2",
+      "title": "Post Two",
+      "body": "Lorem ipsum dolor sit amet",
+      "publishedAt": "20-02-2020"
+    },
+    {
+      "id": "3",
+      "title": "Post Three 123",
+      "body": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+      "publishedAt": "30-03-2020"
+    },
+    {
+      "title": "New Post",
+      "body": "Bla bla",
+      "publishedAt": "2021-02-03",
+      "id": "7KJdF3N"
+    },
+    {
+      "title": "React admin",
+      "body": "React admin and json server",
+      "publishedAt": "2021-02-25",
+      "id": "E5bQc8r"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "Bob Stone 123",
+      "email": "bob@bob.com"
+    },
+    {
+      "name": "Mike",
+      "email": "mike@mike.com",
+      "id": "qnn0a9_"
+    }
+  ]
+}
