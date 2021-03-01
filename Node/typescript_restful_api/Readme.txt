@@ -16,4 +16,14 @@ Init project:
 		"outDir": "./build",   
 
 
-https://www.youtube.com/watch?v=vyz47fUXcxU&ab_channel=TheNerdyCanuck
+To run
+	
+	$ nodemon source/server.ts   or  $npx nodemon source/server.ts
+
+	in the browser 
+	localhost:3001/sample/ping
+	response will {"message":"pong"} 
+
+To build: 
+
+	$ npm run build  --- it will create build folder
