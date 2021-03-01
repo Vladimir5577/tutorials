@@ -52,6 +52,17 @@ $ git checkout new_branch   ---  to pull remote branch and switch to it
 
 $ git push origin --delete new_branch   ---  delete a branch remotely (on github)
 
+$ git clone https://github.com/directory   ---  clone directory
 
+$ git commit --amend   ---  to change message of the commit
 
-	12 accomplihs
+$ git log -1   ---  to see the last commit
+
+$ git log -5   ---  to see 5 last commits
+
+$ git push origin master --force   ---  force push
+
+$ git diff   ---  to see changes
+
+$ git diff master..new_branch   ---  to compare 2 branches
+
