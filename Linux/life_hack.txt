@@ -51,4 +51,11 @@ Linux give permission to the user
 	$ sudo chown username:username folder1
 	$ sudo chmod 750 folder1
 
+//=======================================================
 
+Run React on pm2
+
+	$ pm2 serve build/ 3000 --name "react-build" --spa
+
+Validation for <script> tag
+'regex:/^<script\>(.*)<\/script\>$/s'
