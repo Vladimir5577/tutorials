@@ -56,3 +56,10 @@ Linux give permission to the user
 Run node js in pm2 
 
 	$ pm2 start index.js -i max
+
+Run React on pm2
+
+	$ pm2 serve build/ 3000 --name "react-build" --spa
+
+Validation for <script> tag
+'regex:/^<script\>(.*)<\/script\>$/s'
