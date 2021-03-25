@@ -57,5 +57,16 @@ Run React on pm2
 
 	$ pm2 serve build/ 3000 --name "react-build" --spa
 
+
+Check php versions
+
+	$ ls -la | grep php
+Switch between php versions on apache
+	$ sudo a2dismod php7.4
+	$ sudo a2enmod php7.1
+	$ sudo systemctl restart apache2
+
+
+
 Validation for <script> tag
 'regex:/^<script\>(.*)<\/script\>$/s'

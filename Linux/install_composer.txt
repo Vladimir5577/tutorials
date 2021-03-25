@@ -6,3 +6,14 @@
 3. Then check 
 
 	$ composer
+
+// ======================
+Install symfony globally
+
+	$  wget https://get.symfony.com/cli/installer -O - | bash
+	It will create in home directory ~/.symfony/bin/symfony
+	Copy symfony file to 
+	$ sudo cp symfony /user/local/bin 
+	Then check 
+	$ symfony
+
