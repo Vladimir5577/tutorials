@@ -64,3 +64,11 @@ $ docker-compose restare		--- restart container
 $ docker-compose up			--- start containers
 $ docker-compose down			--- stop every containers
 $ docker exec -it <containerId> bash  --- get into container
+
+//=================================================================
+
+Install Ubuntu
+	$ docker pull ubuntu
+	$ docker run -i -t ubuntu /bin/bash
+	Re - start 
+	$ docker start -i <container_name>

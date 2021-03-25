@@ -1,0 +1,38 @@
+Install apache 
+
+	$ sudo apt install apache2  --- ?
+
+Check status 
+
+	$ systemctl status apache2
+
+In browser type localhost
+
+File configuration: /etc/apache2/apache2.conf
+File enable: /etc/apache2/sites-available/........
+
+Create directory /var/www/myapp and inside file index.html
+
+Create file /etc/apache2/myapp.conf
+
+	<VirtualHost 127.0.0.5:80>
+		ServerName test.com
+		ServerAdmin www.test.com
+		DocumentRoot /var/www/myapp.conf
+		ErrorLog ${APACHE_LOG_DIR}/error-myapp.log
+		CustomLog ${APACHE_LOG_DIR}/access-log combined
+	</VirtualHost>
+
+
+
+Make myapp.cong enable
+
+	$ sudo a2ensite myapp.conf
+
+Reload
+
+	$ sudo systemctl reload apache2
+
+In the browser type 127.0.0.5
+
+In this way we can create multiple websites

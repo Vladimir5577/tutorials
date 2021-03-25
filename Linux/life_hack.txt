@@ -51,7 +51,11 @@ Linux give permission to the user
 	$ sudo chown username:username folder1
 	$ sudo chmod 750 folder1
 
-//=======================================================
+// =============================================
+
+Run node js in pm2 
+
+	$ pm2 start index.js -i max
 
 Run React on pm2
 
