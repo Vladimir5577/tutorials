@@ -72,3 +72,33 @@ Install Ubuntu
 	$ docker run -i -t ubuntu /bin/bash
 	Re - start 
 	$ docker start -i <container_name>
+
+// ==========================================
+
+To get into running container
+
+	$docker exec -t -i container_name /bin/bash
+	or
+	$docker exec -ti container_name /bin/bash
+	or
+	$docker exec -ti container_name sh
+
+
+//==========================================
+
+Docker root folder
+
+    $ cd /var/lib/docker/
+    
+Install vim on alpine
+    $ apk update
+    $ apk add vim
+
+Install vim on ubuntu
+    $ apt-get update
+    $ apt-get install vim
+
+Connect to mysql in terminal
+
+    $ docker exec -it container_name mysql -u user -ppassword
+
