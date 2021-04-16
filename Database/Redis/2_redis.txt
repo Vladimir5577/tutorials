@@ -1,0 +1,83 @@
+To get inside:
+
+    $ redis-cli
+
+    $ quit  --- quit
+
+====================================================
+
+	Basic
+	----------------
+
+	> SET foo 42  --- set key value pair
+	> GET foo 		--- get value of 'foo' key
+	> EXIST foo		--- check if key 'foo' exist 
+
+	> SET bar "Hello" EX 20  --- save on 20 seconds
+	> GETSET foo "Hello"	 --- return old value and set new
+	> APPEND FOO " World"	 --- append to the value
+	
+	> KEYS *	--- to see evety keys
+	
+	-----------
+	increment, decrement
+
+	> SET foo 1
+	> GET foo 
+	> INCR foo  --- increment by 1
+	> decr foo  --- decrement by 1
+	> INCR counter  --- create counter
+
+
+	> FLUSHALL 		--- delete everything in database
+
+
+========================================================
+	
+	Hash set
+	-------------------
+
+	> HSET person name "Bob"  --- create hash set
+	> HSET person age 19	   --- add value 
+
+	> HGET person aget 	--- get person age
+	> HGETALL person	--- get all data
+	> HVALS person 		--- get all values
+	> HKEYS person		--- get al keys
+
+========================================================
+
+	Array
+	----------------------
+
+	> SADD persons "Bob"  	--- create array persons
+	> SADD persons Mike		--- add to person
+	> SMEMBERS person		--- get data
+	
+	> SCARD person			--- count array persons
+	> SUNION arr_1 arr_2 	--- unite 2 arrays
+	> SDIFF arr_1 arr_2		--- difference beetwe
+	> SINTER arr_1 arr_2    --- return common values
+	> SPOP person			--- return and delete random element from array
+
+
+=========================================================
+
+	List
+	--------------------
+
+	> LPUSH my_list Bob  	--- create list my_list and add value Bob
+	> RPUSH my_list Mike	--- add to list to the end
+	> LRANGE my_list 0 -1	--- get all elements on the list
+	> LLEN my_list			--- get length of the list
+
+	> LPOP my_list			--- get and delete the first caracter
+	> RPOP my_list			--- get and delete the last caracter
+	
+	> ZADD <key_name> <number> <value>  --- create orderable array
+	> ZADD persons 1980 Mike	--- create orderable array
+	> ZRANGE persons 0 -1 		--- get list in orderable giving number	
+	> ZRANGE persons 0 -1 WITHSCORES  --- get data and numbers
+
+ 
+

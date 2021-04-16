@@ -1,0 +1,35 @@
+$ tmux --- to run tmux
+
+$ Ctrl + b %  --- to split window vertically
+
+$ Ctrl + b o  --- to switch beetwen windows
+
+$ Ctrl + b "  --- to split the window horizontally
+
+$ exit        --- to exit from window
+
+===========================================
+
+$ Ctrl + b c  --- create a new window
+    in the bottom it will showing windows
+
+$ Ctrl + b 0  --- to switch beetwen windows
+
+$ Ctrl + b ,  --- to rename a window
+
+============================================
+
+    Session
+
+$ Ctrl + b d  --- detach session
+
+$ tmux ls     --- to see sessions
+
+$ tmux attach -t <sesion_name> --- to enter into session
+
+$ tmux reaname-session -t <old_name> <new_name>  --- rename sesion
+
+$ tmux new -s <sesson_name>  --- creat session
+
+$ tmux kill-session -t <session_name>  --- delete session
+
