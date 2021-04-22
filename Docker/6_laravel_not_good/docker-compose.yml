@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    environment:
+      - APACHE_RUN_USER=#1000
+    volumes:
+      - ${APP_PATH_HOST}:${APP_PATH_CONTAINER}
+    ports:
+      - 8080:80
+    working_dir: ${APP_PATH_CONTAINER}
+
+  mysql:
+    image: mysql:5.7.22
+    container_name: laravel_mysql_5.7.22
+    restart: unless-stopped   # it will restart continiously
+    tty: true
+    ports:
+      - "4306:3306"
+    volumes:
+      - ./mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    volumes:
+      - ${DB_PATH_HOST}:/var/lib/mysql
+
+  adminer:
+    image: adminer
+    restart: unless-stopped  # restart continiously
+    ports:
+      - 8085:8080
+
+  composer:
+    image: composer:2.0
+    volumes:
+      - ${APP_PATH_HOST}:${APP_PATH_CONTAINER}
+    working_dir: ${APP_PATH_CONTAINER}
+    # command: compoer install

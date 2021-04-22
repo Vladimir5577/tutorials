@@ -23,11 +23,7 @@ Install laravel:
 	!!! --- name app should be laravel_app because it wrotten in config
 	$ composer create-project laravel/laravel laravel_app
 
-	Laravel project   --- localhost:8088
-	Adminer			  --- localhost:8085
-		server   - mysql
-		user     - user
-		password - password
+	then check in the browser localhost:8088
 
 If need rebuild docker;
 
