@@ -1,0 +1,51 @@
+Install nginx:
+	
+	In the first place stop apache if it running
+		$ sudo service apache2 stop
+	
+	Then install:
+
+	$ apt-get install nginx  --- it will install and start server
+
+
+Check running nginx:
+
+	$ ps aux | grep nginx
+	
+	$ ifconfig  --- see config
+
+----------------------------------------
+Fix error: REMOTE HOST IDENTIFICATION HAS CHANGED!
+
+	$ ssh-keygen -R 64.174.144.14
+----------------------------------------
+
+Install dependencies:   -- ???
+	
+	$ apt-get install build-essential
+
+======================================================
+
+Start Stop
+
+	$ nginx -s stop			 --- to stop
+	or
+	$ systemctl stop nginx   --- it will not starting after rebooting
+
+	$ systemctl start nginx  --- to start
+
+	$ systemctl enable nginx --- it will started after rebooting
+
+	$ systemctl status nginx --- check status
+
+==========================================================
+
+Defoult config file:
+
+	/etc/nginx/nginx.conf
+
+	After changes reload the server
+
+	$ systemctl reload nginx
+
+

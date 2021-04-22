@@ -10,7 +10,7 @@ To build docker:
 	$ docker-compose stop 	--- to stop
 
 	// === to remove ====
-	$ docker-compose down   --- remove container (it will delete every data)
+	$ docker-compose down   --- stop container
 
 In the browser type;
 	

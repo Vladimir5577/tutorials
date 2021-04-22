@@ -1,0 +1,94 @@
+Start redis, to get inside:
+
+    $ redis-cli
+
+========================================
+
+Isert
+
+    > set <key> <value>
+    > set name Bob
+    > set country Germany
+
+Get value
+    
+    > type <key>    --- get type value 
+    > get <key>
+    > get name
+    > get <key> 0 5  --- get first 5 caracters of the string
+    > mset name Bob email bob@bob.com  --- set multiple caracter
+    > mget name email  --- get multiple values
+
+    > strlen name  --- get length of the string
+    > set name Mike  --- change name
+    
+    ------------
+    > set a 1
+    > get a 
+    > incr a   --- increment value a
+    > incrby a 10  --- increment by 10
+    > decr a  --- decrement a
+    > decrby a 10  --- decrement by 10
+    
+    -------------
+    > set a 1
+    > expire a 10  --- expire a after 10 seconds
+    > ttl a     ---  check if how many time leave to exist value a 
+
+    > setex <key> <seconds> <value>
+    > setex a 10 3.14  --- key a vith value 3.14 will be expire after 10 seconds
+
+====================================================================
+
+    Lists
+    _______________
+
+    > keys *                 --- get all keys
+    > flushall               --- delete all keys
+    > lpush country Germany  --- push value to country key
+    > lpush country France   --- push value to country key (to the top)
+    > lrange country 0 -1    --- to get all data country key
+    > lrange country 0 10    --- to get first 10 countries
+    > rpush country Italy    --- to push to the bottom of the list
+    > llen country           --- to check length of country list
+    
+    > rpop country           --- remove from the bottom
+    > lpop country           --- remove from the top
+    > lset country 0 Germany --- change first value
+    
+    > linsert country before Germany "New Zeland"
+    > linsert country after Germany US
+    
+    > lindex country 3       --- get value of 3 index
+    
+    > lpushx movies Terminator  --- it will push in key => movies if it exsist, if not returns null
+    > rpushs movies Terminator  --- ---------
+
+========================================================================
+
+    Sort command
+    --------------
+
+    > sort country ALPHA       --- sort ascending order
+    > sort country desc ALPHA  --- sort by descending order
+
+==========================================================================
+
+    Sets
+    ---------------
+
+    > sadd technology PHP JavaScript    --- set list technology (it store only unique value)
+    > smembers technology               --- check list
+    > scard technology                  --- count list
+    > sismember technology PHP          --- search PHP if exist in sets (will return true or false)
+
+    > sdiff set_1 set_2                 --- compare two sets
+    > sdiffstore new_set set_1 set_2    --- store difference in new_set
+    > sunion set_1 set_1                --- to see union of two sets
+    > sunionstore new_union set_1 set_2 --- store two sets in new_union
+
+
+    Sorted sets
+    -------------------
+
+    >  

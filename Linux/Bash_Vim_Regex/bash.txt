@@ -234,6 +234,10 @@ echo `date`  --- to see current date
 
 
 
+//===================================================
 
+Check free disk space
+
+    $ df -h
 
 19 accomplished
