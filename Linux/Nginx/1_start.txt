@@ -48,4 +48,24 @@ Defoult config file:
 
 	$ systemctl reload nginx
 
+	---------------------------
+	Basic nginx.conf
 
+	events{}
+
+	http {
+		include mime.types;
+
+		server {
+			listen 80;
+			server_name 62.173.140.14;
+
+			root /sites/demo;
+
+			location / {
+				auth_basic: "Enter password";
+				auth_basic_user_file /etc/nginx/.htpasswd;  # for auth on the site
+			}
+		}
+	}
+	--------------------------------
