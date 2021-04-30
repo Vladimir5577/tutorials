@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit</title>
+</head>
+<body>
+
+	<h1>Edit Page</h1>
+
+	<form action="{{ path('update') }}" method="POST">
+		<br>
+		<input type="hidden" name="id" value={{ worker.id }}>
+		<label>Name</label>
+		<input type="text" name="name" value="{{ worker.name }}">
+		<br>
+		<label>Country</label>
+		<input type="text" name="country" value="{{ worker.country }}">
+		<br>
+		<label>Description</label>
+		<input type="description" name="description" value="{{ worker.description }}">
+		<br>
+		<input type="submit" name="submit" value="submit">
+	</form>
+
+
+
+</body>
+</html>
