@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Symfony CRUD</title>
+</head>
+<body>
+
+	<h1>Symfony CRUD</h1>
+
+	<form action="{{ path('add_worker') }}" method="POST">
+		<br>
+		<label>Name</label>
+		<input type="text" name="name">
+		<br>
+		<label>Country</label>
+		<input type="text" name="country">
+		<br>
+		<label>Description</label>
+		<input type="description" name="description">
+		<br>
+		<input type="submit" name="submit" value="submit">
+	</form>
+
+	<br><br>
+
+	<table border="3" cellspacing="0" cellpadding="8">
+		<thead>
+			<tr>
+				<td>Id</td>
+				<td>Name</td>
+				<td>Country</td>
+				<td>Description</td>
+				<td>Action</td>
+			</tr>
+		</thead>
+		<tbody>
+			{% for worker in workers %}
+				<tr>
+					<td>{{ worker.id }}</td>
+					<td>{{ worker.name }}</td>
+					<td>{{ worker.country }}</td>
+					<td>{{ worker.description }}</td>
+					<td>
+						<a href="{{ path('edit', { id: worker.id }) }}">
+							<button>Edit</button>
+						</a>
+						<a href="{{ path('delete', { id: worker.id }) }}">
+							<button>Delete</button>
+						</a>
+					</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+	
+
+</body>
+</html>
