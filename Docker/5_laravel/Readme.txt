@@ -25,9 +25,30 @@ Install laravel:
 
 	then check in the browser localhost:8088
 
+In browser type 
+	- for project 
+		localhost:8080
+	- for adminer
+		localhost:8085
+			then enter credentials
+				Server   - mysql
+				username - root
+				password - password
+
+In project folder in .env pubt credentials
+
+	DB_CONNECTION=mysql
+	DB_HOST=mysql
+	DB_PORT=4306
+	DB_DATABASE=laravel
+	DB_USERNAME=root
+	DB_PASSWORD=password
+
 If need rebuild docker;
 
 Run migration:
 	before put credentials in .env
 
 	$ docker-compose exec php /var/www/html/artisan migrate
+	or
+	$ php artisan migrate

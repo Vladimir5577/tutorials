@@ -28,3 +28,15 @@ To check:
 
 -it   ---  run in interactive mode
 -d    ---  run in detach mode
+
+
+//====================================================
+
+
+To get into running container
+
+	$docker exec -t -i container_name /bin/bash
+	or
+	$docker exec -ti container_name /bin/bash
+	or
+	$docker exec -ti container_name sh
