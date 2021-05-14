@@ -82,6 +82,8 @@ To get into running container
 	$docker exec -ti container_name /bin/bash
 	or
 	$docker exec -ti container_name sh
+	or
+	$ docker exec -ti <container_id> bash
 
 
 //==========================================
