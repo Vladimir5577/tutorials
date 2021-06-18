@@ -6,6 +6,9 @@ Check status
 
 	$ systemctl status apache2
 
+	$ sudo service apache2 start  --- to start
+	$ sudo service apache2 stop   --- to stop
+
 In browser type localhost
 
 File configuration: /etc/apache2/apache2.conf
