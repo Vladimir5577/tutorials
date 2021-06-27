@@ -1,0 +1,53 @@
+Install:
+
+	$ sudo apt install mysql-server
+
+	To get inside:
+		$ sudo mysql
+
+		Check the method auth:
+			> SELECT user,authentication_string,plugin,host FROM mysql.user;
+			We can see auth method --- auth-socket
+			We need to change it to ---  caching_sha2_password
+
+			> ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'password';
+			or to --- mysql_native_password --- better
+			> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+
+			After:
+				> FLUSH PRIVILEGES;
+
+			Then exit:
+				> exit;
+
+Enter to database with new credentials:
+
+	$ mysql -u root -ppassword
+	
+	Create a new user:
+	-----------------
+
+		> CREATE USER 'user'@'localhost' IDENTIFIED BY 'password';
+		
+		Give all priveleges:
+
+		> GRANT ALL PRIVILEGES ON *.* TO 'user'@'localhost' WITH GRANT OPTION;
+
+		> exit;
+
+Enter to db with new user:
+--------------------------
+
+	$ mysql -u user -ppassword
+
+// ===============================================
+
+Check status:
+
+	$ systemctl status mysql.service
+
+If it is not working then tun it:
+
+	$ sudo systemctl start mysql
+
+

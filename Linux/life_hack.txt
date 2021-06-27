@@ -74,3 +74,12 @@ Switch between php versions on apache
 
 Validation for <script> tag
 'regex:/^<script\>(.*)<\/script\>$/s'
+
+
+// =============================================
+
+Give a permission to a directory:
+
+	$ sudo chmod -Rv a+w .
+	or
+	$ sudo chmod -Rv a+w /media/your_user_name/d046d112-22ec-48ce-86ef-dedc382f0516/
