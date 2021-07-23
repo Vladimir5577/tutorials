@@ -71,6 +71,16 @@ $ git clean -f -d   ---  to delete all untracked files and direcrories
 
 //==================
 
+Fetch all remote branches:
+
+$ git branch -r | grep -v HEAD | awk -F'/' '{print $2 " " $1"/"$2}' | xargs -L 1 git branch -f --track
+
+	then
+	$ git fetch --all
+	$ git pull --all
+
+//==================
+
 Revert
 
 Check commits:
