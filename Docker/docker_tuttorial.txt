@@ -82,6 +82,8 @@ To get into running container
 	$docker exec -ti container_name /bin/bash
 	or
 	$docker exec -ti container_name sh
+	or
+	$ docker exec -ti <container_id> bash
 
 
 //==========================================
@@ -108,3 +110,20 @@ Dump in docker
 
 docker exec <container_name> mysqldump -u user -ppassword db_name > dump1.sql
 docker exec -i <container_name> mysql -u user -ppassword db_name < dump1.sql
+
+// ===================================================
+// ===================================================
+
+$ docker images --- to see every downloaded images
+
+$ docker ps     --- lista of all running containers
+
+$ docker ps -a  --- lista of all containers
+
+$ docker run -it node  --- run node container in enteractive mode
+
+$ docker rm <container_id> --- remove container
+
+
+
+>>>>>>> a9ea62458570dde7328d861c0ddbea616e87ab7f

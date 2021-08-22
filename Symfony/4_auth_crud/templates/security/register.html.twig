@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+</head>
+<body>
+
+    <h1>Register</h1>
+
+    <form action="{{ path('register_user') }}" method="POST">
+        <br>
+        <label>Name</label>
+        <input type="text" name="name">
+        <br>
+        <label>Email</label>
+        <input type="text" name="email">
+        <br>
+        <label>Password</label>
+        <input type="text" name="password" required>
+        <br>
+        <input type="submit" name="submit" value="submit">
+    </form>
+
+    <h4>Already have an account</h4>
+    <a href="{{ path('app_login') }}">Login</a>
+
+</body>
+</html>

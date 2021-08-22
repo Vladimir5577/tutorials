@@ -1,0 +1,296 @@
+====================================================================
+
+Data Structures
+=================
+    
+    -> A way to store, organize, and manage information (or data) 
+    in a way that allows you the programmer to easily access or
+    modify the values within them.
+
+    The GOAL of a data structure:
+    -----------------------------
+        -> Store Information
+        -> Access and manipulate that information
+    
+    12 common data structures: 
+    ---------------------------
+        
+        1.  Arrays.
+        2.  ArrayLists.
+        3.  Stacks.
+        4.  Queues.
+        5.  LinkedLists.
+        6.  Doubly-LinkedLists.
+        7.  Dictionaries.
+        8.  Hash-Tables.
+        9.  Trees.
+        10. Tries.
+        11. Heaps.
+        12. Graphs.
+
+====================================================================
+
+Big O notation.
+===============
+    
+    A way to basically "Score" a data structure based on 4 criteria.
+    The most common function we want from data structure
+        -> Accessing elements
+        -> Searching an element
+        -> Inserting an element
+        -> Deleting an element
+
+    A Tiem Complexity Equation 
+    --------------------------
+        works by instrting the size of the data-set as an integer 'n',
+        and return the number of operations that need to be conducted
+        by the computer before the function can finish.
+
+
+====================================================================
+
+1. Array.
+=========
+
+    Array --- consisting of a collection of elements (values or variables),
+            each identified by at least one array index or key.
+
+    An array usually has 3 attributes:
+        
+        1. Name
+        2. Type
+        3. Size
+
+    Parallel arrays --- 2 or more arrays which:
+            -> contain the same number of elements
+            -> have corresponding values in the same position
+
+        names    ['Bob', 'Mike', 'Jack']
+        salaries [10000, 20000, 30222]
+    
+    Array devided by 2 categories:
+        1. Populate First.
+        2. Populate Later.
+
+    Numerical Indexes --- use to get information from array, 
+    integer which corresponds to an element within the array.
+
+    Pros and Cons.
+    --------------------
+        Pros:
+            -> good for storing similar contiguous data
+            -> O(1) accessing power
+            -> very basic. Easy to learn and master
+        Cons:
+            -> size of the array cannot be changed once initialized
+            -> inserting and deleting are not efficient
+            -> can be wasting storage space
+
+        Overall, pretty reliable. Has some flaws as well as advantages.
+        Can be used in almost any program if need be, 
+        but sometimes you may want extra funmctionality.
+
+====================================================================
+
+2. ArrayList.
+==========
+
+    The ArrayList, fundamentally, can be thought of as a growing array.
+    ArrayList --- size is dynamic.
+
+    There are 6 common method for the arrayList:
+        1. Add method.
+        2. Remove method.
+        3. Get method.
+        4. Set method.
+        5. Clear method.
+        6. toArray method.
+
+====================================================================
+
+3. Stack.
+=============
+
+    Stack is a linear data structure which follows a particular order
+    in which the operations are performed.
+    The order may be LIFO(Last In First Out) or FILO(First In Last Out).
+
+    Mainly the following three basic operations are performed in the stack:
+        -> Push: Adds an item in the stack. If the stack is full, then it is said to be an Overflow condition.
+        -> Pop: Removes an item from the stack.
+            The items are popped in the reversed order in which they are pushed. 
+            If the stack is empty, then it is said to be an Underflow condition.
+        -> Peek or Top: Returns top element of stack.
+        -> isEmpty: Returns true if stack is empty, else false.
+
+====================================================================
+
+4. Queue.
+============
+
+    Queue --- sequentials data structure which follows FIFO methodology:
+        First in First out.
+
+    Methods:
+        -> Enqueue method  (add an element)
+        -> Dequeue method  (remove an element)
+        -> Peek
+        -> Contains
+
+
+====================================================================
+
+5. Linked List.
+==================
+
+    LinkedList is a sequential access linear data structure in which every
+    element is a separate boject called a Node, which has 2 parts
+        -> The Data
+        -> The reference (or pointer) which points to the next Node in the List.
+
+    Linked List can be used in the backing of other data structures 
+    We can use Linked List to make Stacks, Queues, etc.
+
+
+====================================================================
+
+6. Doubly-Linked List.
+===================
+
+    The Doubly-Linked List is a sequential access data structure which
+    stores data in the form of Nodes.
+    Able to traverse both forwards and backwards using pointers.
+
+====================================================================
+
+7.  Dictionaries.
+=================
+
+    Dictionary --- an abstracty data structure which stores data in the
+        form of key => value pairs.
+
+    The key's in a key => value pair can be pretty much any primitive
+    data type you can think of (integer, string .....).
+
+    There are 2 extremely important restriction when it comes to dictionaries:
+        -> key should be unique
+        -> each key can have onlyu one value
+
+
+
+====================================================================
+
+8.  Hash-Tables.
+================
+
+    Hash Table is a data structure which stores data in an associative manner.
+    In a hash table, data is stored in an array format, where each data value
+    has its own unique index value. Access of data becomes very fast 
+    if we know the index of the desired data.
+
+    A Hash function will take all the keys for a given dictionary and 
+    strategically map them to certain index location in an array
+    so that they can retrieved easily.
+    
+    The goal of a good hashing function is to take in a key
+    and reliably place it somewhere in the table so that can be accessed later
+    by the computer.
+
+    Dictionaries are build upon these Hash Table, and the key's in our
+    key => value pairs are stored in memory in hash tables at indexes
+    which are determined by a hash function.
+
+    Dictionaries are a very useful:
+        -> the option for non-numerical indexes
+        -> the flexibility when it comes to making keys
+        -> the speed which comes with the hash table implementation
+====================================================================
+
+9.  Trees.
+============
+
+    A Tree --- an abstract data structure which contains a series of
+    linke nodes connected together to form a hierarhical representation
+    of information.
+
+    Vertice --- a certain node in a tree.
+    Edge    --- a connection between nodes.
+    Root Node --- topmost node of a tree.
+    Child Node --- a certain node which has an edge connecting it to
+                    another node one level above itself.
+    Parant Node --- any node which has 1 or more child nodes.
+    Leaf Node   --- any node which has 1 or more child nodes.
+
+    Property of the Tree:
+        Height --- number of edges on the longest possible 
+                path down towards a leaf.
+
+    Property of a Node:
+        Depth --- number of edges required to get from that 
+                particular node to the root node.
+
+
+    Binary Search Tree --- is a simple variation on the standard tree
+        which has three restrictions on it to help organize the data.
+            -> a node can have at most 2 children.
+            -> for any given parent node, the child to the left has
+                a value less than or equal to itself, and the child
+                to the right has a value greater than or equal to itself.
+            -> no 2 nodes can contain the same value.
+
+    The biggest advantage of Binary Search Trees is that we're 
+    able to search through them in Logarithmic Time.
+
+
+====================================================================
+
+10. Tries.
+============
+
+    A Trie is a tree-like data structure whose nodes store
+    letters of an alphabet in the form of characters.
+
+    We can carefully construct this tree of characters in such
+    a way which allows us to quickly retrieve words in the form 
+    of Strings by traversing down a path of the trie 
+    in a certain way.
+
+    Flagging --- marking the end of a word by haning it also point 
+    towards a "flag" to the computer know that the end 
+    of a word has occured.
+
+
+====================================================================
+
+11. Heaps.
+=========
+
+    Heap --- special tree where all parent node compare to their children 
+    node's in some specific way by being more or less extreme.
+        -> either greater than or less than
+        -> determines where the data is stored
+        -> usualy dependent on the parent node's value.
+
+    Min-Heap:
+        -> the value at the Root Node of the tree must be the minimum 
+            amongst all of its children
+        -> this fact must be the same recursively for all parent node's
+            contained within the heap
+
+    Max-Heaps:
+        -> the value at the Root Node of the tree must be the maximum 
+            amongst all of its children
+        -> this fact must be the same recursively for all parent node's
+            contained within the heap.
+
+====================================================================
+
+12. Graphs.
+============
+
+    A Graph --- a nonlinear data structure consisting of nodes nad edges
+        -> finite set of nodes (vertices)
+        -> nodes are connected by teh edges
+
+====================================================================
+====================================================================

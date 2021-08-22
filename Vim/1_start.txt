@@ -71,7 +71,14 @@ $  ---  to move on the end of the line
 
 g + Ctrl-G --- information about the file
 
+x  ---  delete a caracter in the cursor position
+X  ---  delete a caracter from right cursor position
 
+[[ --- put cursor on beginning
+]] --- put cursor to the end
+
+{  --- move the cursor back betveen paragraphs 
+}  --- move the cursor forvard between paragraphs
 
 ---------------------------------------------------------
 
@@ -101,9 +108,7 @@ dd --- delete entirely line
 
 . --- repeat previous command
 
-asl;dfjadslfasd as ads a
-asdf
-
+u  ---  undo changes
 
 
 ---------------------------------------------------------

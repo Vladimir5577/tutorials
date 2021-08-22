@@ -44,7 +44,7 @@ Working with database:
 	1. Create database:
 	Before create go to the .env file and put credentials, then run
 
-	$ php bin/console doctrine:database:create
+	$ php bin/console doctrine:database:create 		--- it will create database like in .env
 
 	2. Create entity (table):
 

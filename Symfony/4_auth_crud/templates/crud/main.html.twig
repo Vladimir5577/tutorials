@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Symfony CRUD</title>
+</head>
+<body>
+
+    <h1>Symfony CRUD</h1>
+
+    {% if is_granted('ROLE_USER') %}
+        <h1>Hello admin</h1>
+    {% else %}
+        <h1>Hello user</h1>
+    {% endif %}
+
+    <form action="{{ path('add_worker') }}" method="POST">
+        <br>
+        <label>Name</label>
+        <input type="text" name="name">
+        <br>
+        <label>Country</label>
+        <input type="text" name="country">
+        <br>
+        <label>Email</label>
+        <input type="text" name="email">
+        <br>
+        <input type="submit" name="submit" value="submit">
+    </form>
+
+    <br><br>
+
+    <a href="{{ path('app_login') }}">Login</a>
+
+    <br><br>
+
+    <table border="3" cellspacing="0" cellpadding="8">
+        <thead>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Country</td>
+            <td>Email</td>
+            <td>Action</td>
+        </tr>
+        </thead>
+        <tbody>
+        {% for worker in workers %}
+            <tr>
+                <td>{{ worker.id }}</td>
+                <td>{{ worker.name }}</td>
+                <td>{{ worker.country }}</td>
+                <td>{{ worker.email }}</td>
+                <td>
+                    <a href="{{ path('edit', { id: worker.id }) }}">
+                        <button>Edit</button>
+                    </a>
+                    <a href="{{ path('delete', { id: worker.id }) }}">
+                        <button>Delete</button>
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
