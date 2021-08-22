@@ -104,3 +104,18 @@ Connect to mysql in terminal
 
     $ docker exec -it container_name mysql -u user -ppassword
 
+// ===================================================
+// ===================================================
+
+$ docker images --- to see every downloaded images
+
+$ docker ps     --- lista of all running containers
+
+$ docker ps -a  --- lista of all containers
+
+$ docker run -it node  --- run node container in enteractive mode
+
+$ docker rm <container_id> --- remove container
+
+
+

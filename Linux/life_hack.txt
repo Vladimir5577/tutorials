@@ -83,3 +83,10 @@ Give a permission to a directory:
 	$ sudo chmod -Rv a+w .
 	or
 	$ sudo chmod -Rv a+w /media/your_user_name/d046d112-22ec-48ce-86ef-dedc382f0516/
+
+// =============================================
+
+Give a permission to ssh
+
+    $ chmod 600 id_rsa
+    $ chmod 644 id_rsa.pub
