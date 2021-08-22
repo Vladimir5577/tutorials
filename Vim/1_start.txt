@@ -17,6 +17,14 @@ esc --- to change mode
 :q! --- quit without saving
 :wq --- write and quit
 
+vim .  --- open vim navigation
+:Vex  --- split window vertically
+:Sex  --- split horizontally
+Ctrl+w v  --- split the same vindow
+Ctrl+w l --- navigate to left
+Ctrl+w h --- navigate to right
+Ctrl+w o --- close split window
+
 ----------------------------------------------------------
 
 Navigation

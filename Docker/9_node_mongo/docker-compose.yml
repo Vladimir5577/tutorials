@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+
+    node-app:
+        build: .  # where Dockerfile
+        ports:
+            - "3000:3000"
+        volumes:
+            - ./:/app 
+            - /app/node_modules
+        environment:
+            - PORT=3000
+        # env_file:
+            # - ./.env
+        depends_on:
+            - mongo
+    
+    mongo:
+        image: mongo
+        restart: unless-stopped
+        environment:
+            - MONGO_INITDB_ROOT_USERNAME=user
+            - MONGO_INITDB_ROOT_PASSWORD=password
+        volumes:
+            - ./mongo_db:/data/db
+
+volumes:
+    mongo_db:

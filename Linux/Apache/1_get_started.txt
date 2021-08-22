@@ -1,6 +1,16 @@
 Install apache 
 
-	$ sudo apt install apache2  --- ?
+	$ sudo apt install apache2  
+
+Remove apache
+	$ sudo apt-get --purge remove apache2
+	$ sudo apt-get remove apache2-common
+
+Start 
+	$ sudo service apache2 start
+
+Stop apache
+	$ sudo service apache2 stop
 
 Check status 
 

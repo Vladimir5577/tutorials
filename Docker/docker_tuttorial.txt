@@ -102,3 +102,9 @@ Connect to mysql in terminal
 
     $ docker exec -it container_name mysql -u user -ppassword
 
+//==============================================
+
+Dump in docker
+
+docker exec <container_name> mysqldump -u user -ppassword db_name > dump1.sql
+docker exec -i <container_name> mysql -u user -ppassword db_name < dump1.sql

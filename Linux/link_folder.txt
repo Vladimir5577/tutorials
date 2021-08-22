@@ -1,0 +1,3 @@
+
+#       Source          Link
+ln -s /path/to/source /path/to/link

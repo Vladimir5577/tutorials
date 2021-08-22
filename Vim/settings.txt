@@ -1,14 +1,20 @@
 In the folder /etc/vim/ inside file vimrc put command 
+or ~/.vimrc
 
 
 syntax on
-set tabstop=4
-set autoindent
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+
+"set autoindent
 set wrap
 set number
 set mouse=a
 set incseatch
 set hlsearch
+set scrolloff=8 	--- to scrol with navigation
 colo ron      --- color by default
 
 inoremap ( ()<left>  - for autocompletion

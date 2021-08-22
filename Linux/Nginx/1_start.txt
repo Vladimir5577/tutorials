@@ -6,6 +6,9 @@ Install nginx:
 	Then install:
 
 	$ apt-get install nginx  --- it will install and start server
+	
+	Remove:
+	$ sudo apt-get purge nginx nginx-common
 
 
 Check running nginx:
