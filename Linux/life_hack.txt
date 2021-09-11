@@ -36,6 +36,8 @@ For sublime to exclude node modules from search
 		"*.jar",
 		"*.zip"
 	],
+    "word_wrap": true,
+    "ignored_packages": [],   // to enable vim 
 
 //=======================================================
 

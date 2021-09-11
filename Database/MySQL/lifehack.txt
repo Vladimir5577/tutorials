@@ -6,3 +6,14 @@ To create user in mysql and give all privelege
 To give for root permission and change password 
 	mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 
+
+// ===============================================
+
+Create unique value in two columns:
+
+REATE TABLE two_unique_values (
+    id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    person int NOT NULL,
+    product int NOT NULL,
+    CONSTRAINT pk_unique UNIQUE (person, product)
+);

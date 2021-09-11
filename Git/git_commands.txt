@@ -86,3 +86,9 @@ Revert
 Check commits:
 	
 	$ git log --oneline <branch>
+
+//==================
+
+Reset changes in a folder or file
+
+    $ git checkout -- path/to/file
