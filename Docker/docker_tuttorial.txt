@@ -124,6 +124,10 @@ $ docker run -it node  --- run node container in enteractive mode
 
 $ docker rm <container_id> --- remove container
 
+// =====================================================
 
+Give docker permission (not write sudo every time)
+
+$ sudo chmod 666 /var/run/docker.sock
 
 >>>>>>> a9ea62458570dde7328d861c0ddbea616e87ab7f
