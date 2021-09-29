@@ -1,0 +1,36 @@
+Start: 
+
+    $ pm2 start index.js
+
+Check processes:
+
+    $ pm2 list 
+    or
+    $ pm2 ls
+    
+    More detail info:
+        $ pm2 show <name or id>
+    Monitor real time:
+        $ pm2 monit
+
+To see logs:
+
+    $ pm2 logs
+
+Stop:
+
+    $ pm2 stop <name or id>
+
+Restart:
+
+    $ pm2 restart <name or id>
+
+
+Watch:
+
+    $ pm2 start index.js "my_app" --watch
+
+Delete:
+
+    $ pm2 delete all   --- delete all process
+    $ pm2 delete index --- delete index process

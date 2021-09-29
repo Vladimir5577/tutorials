@@ -132,3 +132,9 @@ RUN echo set number >> /etc/vim/vimrc
 RUN echo set tabstop=4  >> /etc/vim/vimrc
 RUN echo colo ron  >> /etc/vim/vimrc
 RUN echo set autoindent  >> /etc/vim/vimrc
+// =====================================================
+
+Give docker permission (not write sudo every time)
+
+$ sudo chmod 666 /var/run/docker.sock
+
