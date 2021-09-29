@@ -1,0 +1,43 @@
+Install vim:
+    $ sudo apt install vim
+        then put settings in /etc/vim/vimrc
+
+Install git:
+    $ sudo apt install git
+
+        add settings:
+            $ git config --global user.name "FIRST_NAME LAST_NAME"
+            $ git config --global user.email "MY_NAME@example.com"
+        Check settings:
+            $ git config --list
+
+
+Install curl:
+    $ sudo apt install curl
+
+Install docker (using convenience script):
+    $  curl -fsSL https://get.docker.com -o get-docker.sh
+    $  sudo sh get-docker.sh
+
+    Install docker-compose:
+        $ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+        $ sudo chmod +x /usr/local/bin/docker-compose
+        check 
+        $ sudo docker-compose --version
+    
+Install node js:
+link: https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04-ru
+variant = 3;
+
+    $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh
+    $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+    $ source ~/.bashrc
+    $ nvm list-remote
+    $ nvm install v16.9.1
+
+
+
+    
+
+
+

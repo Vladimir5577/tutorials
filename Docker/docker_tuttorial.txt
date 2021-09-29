@@ -124,6 +124,11 @@ $ docker run -it node  --- run node container in enteractive mode
 
 $ docker rm <container_id> --- remove container
 
+// ===================================================
 
-
->>>>>>> a9ea62458570dde7328d861c0ddbea616e87ab7f
+# install vim
+RUN ["apt-get", "install", "-y", "vim"]
+RUN echo set number >> /etc/vim/vimrc
+RUN echo set tabstop=4  >> /etc/vim/vimrc
+RUN echo colo ron  >> /etc/vim/vimrc
+RUN echo set autoindent  >> /etc/vim/vimrc
