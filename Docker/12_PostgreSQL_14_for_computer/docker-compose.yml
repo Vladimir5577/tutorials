@@ -1,0 +1,33 @@
+version: '3.1'
+
+networks:
+    postgresql_14_adminer:
+
+services:
+
+    # postgresql
+    postgresql-service:
+        image: postgres:14
+        container_name: postgre_db
+        ports:
+            - 5432:5432
+        volumes:
+            - ./data:/var/lib/postgresql/data
+        # restart: unless-stopped  
+        environment:
+            POSTGRES_USER: root
+            POSTGRES_PASSWORD: password
+        networks:
+            - postgresql_14_adminer
+
+    # adminer        
+    adminer:
+        image: adminer:4.8.1
+        # restart: unless-stopped 
+        ports:
+            - 8085:8080
+        networks:
+            - postgresql_14_adminer
+
+volumes:
+    data:

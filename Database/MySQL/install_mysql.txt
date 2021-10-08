@@ -51,3 +51,12 @@ If it is not working then tun it:
 	$ sudo systemctl start mysql
 
 
+// ===============================================
+
+Uninstall mysql:
+
+    $ sudo apt remove --purge mysql-server
+    $ sudo apt purge mysql-server
+    $ sudo apt autoremove
+    $ sudo apt autoclean
+    $ sudo apt remove dbconfig-mysql
