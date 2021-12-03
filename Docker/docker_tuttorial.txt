@@ -138,3 +138,10 @@ Give docker permission (not write sudo every time)
 
 $ sudo chmod 666 /var/run/docker.sock
 
+or 
+1. Create the docker group.
+	$ sudo groupadd docker
+2. Add your user to the docker group.
+	$ sudo usermod -aG docker $USER
+	$ newgrp docker 
+3. Give it a try!

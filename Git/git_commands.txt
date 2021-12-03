@@ -86,6 +86,8 @@ Revert
 Check commits:
 	
 	$ git log --oneline <branch>
+	$ git show --oneline -s   --- check current commit
+	$ git log --reflog    	--- check all commits
 
 //==================
 

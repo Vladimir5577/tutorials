@@ -1,0 +1,14 @@
+Give permission to access from different ip:
+
+    mysql> GRANT ALL PRIVILEGES ON *.* TO 'USERNAME'@'%' IDENTIFIED BY 'PASSWORD' WITH GRANT OPTION;
+    mysql> FLUSH PRIVILEGES;
+
+Then comment out the below line in file "/etc/mysql/mysql.conf.d/mysqld.cnf" (is required!):
+
+    bind-address = 127.0.0.1 
+
+    $ sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
+
+If it need then restart mysql:
+    
+    $ sudo service mysql restart
