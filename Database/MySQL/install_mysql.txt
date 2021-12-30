@@ -60,3 +60,10 @@ Uninstall mysql:
     $ sudo apt autoremove
     $ sudo apt autoclean
     $ sudo apt remove dbconfig-mysql
+
+or  --- helpful in case of mistake
+
+	$ sudo apt-get purge mysql-server mysql-client mysql-common  --- helpful in case of mistake
+
+// ================================================
+

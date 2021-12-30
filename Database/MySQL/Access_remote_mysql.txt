@@ -1,7 +1,14 @@
-Give permission to access from different ip:
+Give permission to access from different ip (??? --- seems like an old method):
 
     mysql> GRANT ALL PRIVILEGES ON *.* TO 'USERNAME'@'%' IDENTIFIED BY 'PASSWORD' WITH GRANT OPTION;
+
+	or give access to myltiple ip addresses
+	mysql> GRANT ALL PRIVILEGES ON *.* TO 'USERNAME'@'1.2.3.4' IDENTIFIED BY 'PASSWORD' WITH GRANT OPTION;
+	mysql> GRANT ALL PRIVILEGES ON *.* TO 'USERNAME'@'5.6.7.8' IDENTIFIED BY 'PASSWORD' WITH GRANT OPTION;
+
     mysql> FLUSH PRIVILEGES;
+
+	% --- means grant access to any ip addresses (could be dangerous)
 
 Then comment out the below line in file "/etc/mysql/mysql.conf.d/mysqld.cnf" (is required!):
 
@@ -12,3 +19,41 @@ Then comment out the below line in file "/etc/mysql/mysql.conf.d/mysqld.cnf" (is
 If it need then restart mysql:
     
     $ sudo service mysql restart
+
+// ============================================================
+
+Giva permissions to db from different ip (new method):
+---------------------------------------------------------------
+
+1. Create user with ip address:
+
+	mysql> CREATE USER 'user'@'1.2.3.4' IDENTIFIED BY 'password';
+	mysql> CREATE USER 'user'@'4.5.6.7' IDENTIFIED BY 'password';
+	
+2. Grant priveledge:
+
+	mysql>  GRANT ALL PRIVILEGES ON *.* TO 'user'@'1.2.3.4' IDENTIFIED BY 'password' WITH GRANT OPTION;
+	or maybe better
+	mysql> GRANT ALL PRIVILEGES ON *.* TO 'user'@'1.2.3.4' WITH GRANT OPTION;
+3. Flush privileges (if need - ?):
+
+	mysql> FLUSH PRIVILEGES;
+
+4. If it need then restart mysql:
+    
+    $ sudo service mysql restart
+
+5. Update user.
+
+	$ UPDATE mysql.user SET Host='1.2.3.4' WHERE Host='5.6.7.8' AND User='user';
+
+6. Delete user:
+
+	mysql> DROP USER 'user'@'1.2.3.4';
+
+// ============================================================
+Check mysql users:
+
+	$ select host, user from mysql.user;
+	or 
+	$ select * from mysql.user;
