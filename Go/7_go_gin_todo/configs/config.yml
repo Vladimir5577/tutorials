@@ -1,0 +1,9 @@
+port: 8000
+
+db:
+  username: root
+  password: password
+  host: localhost
+  port: 5432
+  dbname: go_gin_todo
+  sslmode: disable

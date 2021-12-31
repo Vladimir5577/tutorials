@@ -131,3 +131,6 @@ Install php-8.
     $ sudo apt install php8.0-fpm 
     $ sudo systemctl enable php8.0-fpm
     $ sudo systemctl start php8.0-fpm 
+// =============================================
+Kill server
+	$ kill -9 $(lsof -t -i:8080)
