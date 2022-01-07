@@ -1,0 +1,4 @@
+0000000000000000000000000000000000000000 400a84a368779bb26816d6005742630a574ade89 Vladimir <vladimir160933@gmail.com> 1641147595 +0300	branch: Created from HEAD
+400a84a368779bb26816d6005742630a574ade89 400a84a368779bb26816d6005742630a574ade89 Vladimir <vladimir160933@gmail.com> 1641147785 +0300	Branch: renamed refs/heads/7_implementing_hexagonal_architecture to refs/heads/7_database_adapter
+400a84a368779bb26816d6005742630a574ade89 0c6b96f94f2adea0f28d5842b0c88ba858c1bc1b Vladimir <vladimir160933@gmail.com> 1641151283 +0300	commit: 7 database adapter
+0c6b96f94f2adea0f28d5842b0c88ba858c1bc1b 86c6a34150ccc86c72fa3d9e86aee0a2bb0a7c0d Vladimir <vladimir160933@gmail.com> 1641191931 +0300	commit: 7 database adapter

@@ -54,6 +54,11 @@ Install php-8.
     $ sudo systemctl start php8.0-fpm 
 
 //===============================================================
+
+Install make:
+	$ sudo apt install make
+
+//===============================================================
     
 Sftp connection to the server through file manager:
 

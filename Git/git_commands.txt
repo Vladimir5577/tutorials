@@ -94,3 +94,8 @@ Check commits:
 Reset changes in a folder or file
 
     $ git checkout -- path/to/file
+
+//==================
+
+Rename current branch:
+	$ git branch -m <newname>
