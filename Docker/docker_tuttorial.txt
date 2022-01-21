@@ -145,3 +145,14 @@ or
 	$ sudo usermod -aG docker $USER
 	$ newgrp docker 
 3. Give it a try!
+
+
+// =====================================================
+Remove docker unused images (restore spase).
+	$ docker system prune --volumes
+
+// =====================================================
+Check logs exited container:
+	$ docker logs <container_name>
+
+

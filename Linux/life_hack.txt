@@ -136,6 +136,10 @@ Kill server
 	$ kill -9 $(lsof -t -i:8080)
 
 // =============================================
+Check ip:
+	$ ip a
+
+// =============================================
 To read pdf in the browesr in dark mode.
 // colors:
 // #696969 - little shady, #F7F9F9, #FDFEFE - dark
@@ -154,3 +158,8 @@ let css = `
 `
 cover.setAttribute("style", css);
 document.body.appendChild(cover);
+
+// =============================================
+Change php version
+
+sudo update-alternatives --config php
