@@ -31,3 +31,18 @@ Run with live reload:
         $ ~/GOPATH/bin/air
         or 
         $ ~/go/bin/air
+
+// ==========================================================
+Debug with Delve
+
+If deleve not available
+$ dlv
+then
+
+$ ~/go/bin/dlv 
+
+$ dlv debug  --- open delve
+> break main.go:10  --- set breakpoint on line 10
+> continue  --- run until breakpoint
+> locals    --- print local variable
+> restart   --- Restart process
