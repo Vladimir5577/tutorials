@@ -29,5 +29,6 @@ services:
         networks:
             - postgresql_14_adminer
 
+# it will persist data after $ docker-compose down
 volumes:
     data:

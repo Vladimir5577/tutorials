@@ -1,0 +1,18 @@
+Dump to file:
+	$ mongodump --db databasename
+
+
+Dump from file:
+	$ mongorestore --verbose \path\dump  --- restore to origin database
+
+	$ mongorestore --db new_db --verbose \path\to\file.bson  --- restore to a new database
+
+
+Export JSON File:
+--------------------
+
+	$ mongoexport --db <database-name> --collection <collection-name> --out output.json --pretty
+
+Import JSON File:
+	
+	$ mongoimport --db <database-name> --collection <collection-name> --file input.json

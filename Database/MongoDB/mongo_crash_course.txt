@@ -2,11 +2,12 @@ mongo --- start mongodb
 
 show dbs; --- show databases 
 
-use myCustomers; --- createand switch to this database
+use myCustomers; --- create and switch to this database
 
 db --- check current database
 
 Create record:
+------------------
 
 db.createUser({
 	user: "Bob",
@@ -19,31 +20,39 @@ use myCustomers; --- create and switch to this database
 
 db.createCollection('customers'); --- create collection (table for mysql)
 
-show collections; ---  to show collections
+show collections; ---  to show collections (tables in mysql)
+
+// ==========================================================================
+
+========================
+		Create:
+========================
 
 db.customers.insert({first_name: "Bob", last_name: "Cumer"});  --- insert record to the collection
+
+
+// ==========================================================================
+
+========================
+		Read:
+========================
+
+db.costomers.count();	---   count records
 
 db.customers.find(); --- find all record from the collection
 
 db.customers.find().pretty();  ---  to show in readable format
 
-db.costomers.count();	---   count records
+db.customers.find().sort({_id:-1});  --- find if descending order
+	
+	.sort({_id: -1})		--- descending order
+	.sort({_id: 1}) 		--- ascending order
+	.sort({name: 1})		--- name in ascending order
+	.limit(10)				--- limit 10
+	.pretty()				--- show in readable format
 
-db.customers.update({first_name: "Bob"}, {first_name: "New Bob", last_name: "New", age: 24}); --- update with match name 
-
-db.customers.update({first_name: "Bob"}, {$set:{gender: "male"}}); --- keep previous and add new caracter to the record with $set
-
-db.customers.update({first_name: "Bob"}, {$inc:{age:5}}); --- update increment the age record
-
-db.customers.update({first_name: "Bob"}, {$unset:{age: 1}});  --- delete 'age' record
-
-db.customers.update({first_name: "Mary"}, {first_name: "Mary Lui", last_name: "Samson"}, {upsert: true}); --- update or create
-
-db.customers.update({first_name: "Bob"}, {$rename:{"first_name": "name"}});  --- to change the key
-
-db.customers.remove({first_name: "Mike"});  ---  to remove the record
-
-db.customers.remove({first_name: "Bob"}, {justOne: true});  ---  to remove only one record (limit)
+	db.customers.find().sort({_id:-1}).limit(5).pretty;	 --- find last 5 records 
+	
 
 db.customers.find({first_name: "Bob"});  ---  find the record (where name Bob)
 
@@ -68,6 +77,41 @@ db.customers.find().limit(10); ---  find with limit 10
 db.customers.find().limit(10).sort({name: 1}); ---  find with limit 10 in acdending order
 
 db.customers.find().forEach(function(doc){print("Customer Name: " + doc.first_name)});
+
+// ==========================================================================
+
+========================
+		Update:
+========================
+
+db.customers.update({first_name: "Bob"}, {first_name: "New Bob", last_name: "New", age: 24}); --- update with match name 
+
+db.customers.update({first_name: "Bob"}, {$set:{gender: "male"}}); --- keep previous and add new caracter to the record with $set
+
+db.customers.update({first_name: "Bob"}, {$inc:{age:5}}); --- update increment the age record
+
+db.customers.update({first_name: "Bob"}, {$unset:{age: 1}});  --- delete 'age' record
+
+db.customers.update({first_name: "Mary"}, {first_name: "Mary Lui", last_name: "Samson"}, {upsert: true}); --- update or create
+
+db.customers.update({first_name: "Bob"}, {$rename:{"first_name": "name"}});  --- to change the key
+
+// ==========================================================================
+
+==========================
+		Delete:
+==========================
+
+db.customers.drop(); --- drop (remove) the collection of customers
+
+db.customers.remove({first_name: "Mike"});  ---  to remove the record (will remove every record with name Mike), warning !!!
+
+db.customers.remove({first_name: "Bob"}, {justOne: true});  ---  to remove only one record (limit)
+
+// ==========================================================================
+
+
+
 
 
 sudo apt-get install vim-gtk3 -y  --- install clipboard 

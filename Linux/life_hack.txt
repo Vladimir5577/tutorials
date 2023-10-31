@@ -116,6 +116,14 @@ Rsycn
 		-azP --delete   --- delete what has been deleted from the source
 		-azP --exclude=node_modules  --- exclude
 
+// ================================================
+-----------------
+	scp
+----------------
+
+scp website.ru:~/dump.sql .  // copy a file from the server in current directory
+scp -r website.ru:~/path/to/folder .  // copy a folder 'media' in current directory
+
 
 
 // =============================================

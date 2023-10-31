@@ -1,5 +1,5 @@
-ToClean up operation memory cache Linux
+To clean up operation memory cache Linux (free Ram from cache):
 
-sudo sh -c "sync; echo 3 > /proc/sys/vm/drop_caches"
+	$ sudo sh -c "sync; echo 3 > /proc/sys/vm/drop_caches"
 
 

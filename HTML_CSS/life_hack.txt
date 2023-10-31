@@ -1,0 +1,18 @@
+Eyes friendly style:
+
+	/* =====================
+		light mode
+	 ======================= */
+	body {
+		background: #808080;
+		color: #080808;
+	}
+
+	/* =====================
+		Dark mode
+	 ======================= */
+	body {
+		background: #0f0f0f;
+		color: #808080;
+	}
+
