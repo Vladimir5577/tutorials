@@ -171,3 +171,10 @@ document.body.appendChild(cover);
 Change php version
 
 sudo update-alternatives --config php
+
+// =============================================
+Check linux version
+
+	$ cat /etc/issue
+	or
+	$ cat /etc/os-release
