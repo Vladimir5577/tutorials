@@ -64,6 +64,7 @@ $ docker-compose restare		--- restart container
 $ docker-compose up			--- start containers
 $ docker-compose down			--- stop every containers
 $ docker exec -it <containerId> bash  --- get into container
+$ docker exec -it <containerId> sh    --- get into container
 
 //=================================================================
 
