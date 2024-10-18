@@ -1,0 +1,8 @@
+Save stash with a message
+	$ git stash push -m "my_stash_name"
+
+List stashes:
+	$ git stash list
+
+Apply stash:
+	$ git stash pop stash@{n}

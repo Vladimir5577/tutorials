@@ -5,48 +5,48 @@ import "fmt"
 
 func main() {
 
-	ages := make(map[string]int)
-	ages["James"] = 35
-	fmt.Printf("James is %d years old\n", ages["James"])
+	fmt.Println("==== Initialize a map =======================")
+	usersMap := map[string]int{
+		"Bob": 25,
+		"Jack": 34,
+		"Mike": 28,
 
-	ages["Susan"] += 1 // Happy Birthday Susan
-	fmt.Printf("Susan is %d years old\n", ages["Susan"])
-
-	// addr := &ages["Susan"] // cannot take address of map value
-
-	gpas := map[string]float32 {
-		"James": 3.4,
-		"Alice": 3.9,
 	}
-	fmt.Printf("James' GPA is %.2f\n", gpas["James"])
-	fmt.Printf("Alice's GPA is %.2f\n", gpas["Alice"])
+	fmt.Println(usersMap)
+	fmt.Println("=============================================")
 
-	var visited map[string]bool
-	visited = make(map[string]bool)
-	visited["A"] = true
-	fmt.Printf("A has been visited? %v\n", visited["A"])
+	fmt.Println("===== Initialize an empty map ===============")
+	// initialize an empty map (more offen and idiomatic way)
+	workers := map[string]int{}
+	fmt.Println("Empty map workers: ", workers)
 
-	fruits := []string {
-		"bananas",
-		"kiwis",
-		"apples",
-		"strawberries",
-		"tomatos",
-		"bananas",
+	// another way to initialize a map
+	users := make(map[string]int)
+
+	users["Bob"] = 25
+	users["Jack"] = 34
+	users["Donna"] = 35
+	users["Jessica"] = 28
+	users["Luis"] = 46
+
+	fmt.Println(users)
+	fmt.Println("Bob age is: ", users["Bob"])
+	fmt.Println("===== Check key exist or not ===============")
+	// check if key exist in the map or not
+	age, ok := users["Mike"]
+	if !ok {
+		fmt.Println("Mike does not exist in the map")
+	} else {
+		fmt.Println("Mike age: ", age)
 	}
-	fmt.Printf("Duplicate fruits? %s\n", findDuplicates(fruits))
-}
 
-func findDuplicates(words []string) string {
-	dupMap := make(map[string]bool)
+	fmt.Println("===== Delete from the map ==================")
+	delete(users, "Jessica")
+	fmt.Println(users)
 
-	for i := 0; i < len(words); i++ {
-
-		if !dupMap[words[i]] {
-			dupMap[words[i]] = true
-		} else {
-			return words[i]
-		}
+	fmt.Println("===== Range over the map ===================")
+	for k, v := range users {
+		fmt.Printf("Key: %v and value: %v\n", k, v)
 	}
-	return ("")
+
 }

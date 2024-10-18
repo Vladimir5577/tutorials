@@ -1,0 +1,4 @@
+github.com/BryanMwangi/pine v1.0.4 h1:ubLE7HKhEeeo3ayjqxwURgGwxuXhQ46zO2kCSbUlGUc=
+github.com/BryanMwangi/pine v1.0.4/go.mod h1:j6+gT+N2HeeJHc9Z60rUOnEmNC+s/Gdmh2e9oB/eScI=
+github.com/google/uuid v1.6.0 h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0=
+github.com/google/uuid v1.6.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=

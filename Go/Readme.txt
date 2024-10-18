@@ -46,3 +46,9 @@ $ dlv debug  --- open delve
 > continue  --- run until breakpoint
 > locals    --- print local variable
 > restart   --- Restart process
+
+
+// ==========================================================
+
+Print structure to the console:
+	fmt.Printf("Structure: %+v\n", my_structure)

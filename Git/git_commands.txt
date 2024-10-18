@@ -99,3 +99,10 @@ Reset changes in a folder or file
 
 Rename current branch:
 	$ git branch -m <newname>
+
+//==================
+Log commits to specific branch with graph
+	$ git log --graph [branchname] 
+
+Check difference between commits
+	$ git diff <commit>...<commit>
