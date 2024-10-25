@@ -183,3 +183,7 @@ Check linux version
 	$ cat /etc/issue
 	or
 	$ cat /etc/os-release
+
+// =====================================================
+Remove docker unused images (restore spase).
+	$ docker system prune --volumes

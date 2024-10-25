@@ -23,3 +23,8 @@ func count(thing string, c chan string) {
 
 	close(c)
 }
+
+/*
+Channel (buffered or unbuffered) will olways block if its full
+
+*/
