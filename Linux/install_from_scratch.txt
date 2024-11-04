@@ -20,10 +20,17 @@ Install docker (using convenience script):
     $  sudo sh get-docker.sh
 
     Install docker-compose:
-        $ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+        $ sudo curl -SL https://github.com/docker/compose/releases/download/v2.29.6/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
         $ sudo chmod +x /usr/local/bin/docker-compose
         check 
         $ sudo docker-compose --version
+
+// =============================================================
+
+Give a permission to ssh
+
+    $ chmod 600 id_rsa
+    $ chmod 644 id_rsa.pub
     
 //===============================================================
 
