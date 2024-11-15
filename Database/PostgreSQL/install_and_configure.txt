@@ -1,0 +1,34 @@
+Install:
+	$ apt install postgresql
+	
+Remove:
+	$ sudo apt-get --purge remove postgresql
+	$ dpkg -l | grep postgres
+	$ apt-get --purge remove postgre*
+
+
+Check status and version:
+	$ service postgresql status
+	$ psql --version  
+
+Open in the terminal:
+	If need change directory (postgres can not create a path)
+	$ cd /tmp
+	$ sudo -u postgres psql
+
+	In addition to creating a postgres admin user for you,
+	PostgreSQL installation also creates a default database named 
+	“postgres” and connects you to it automatically when you first launch psql.
+
+	After first launching psql, you may check the details of your connection 
+	by typing \conninfo into the interpreter.
+
+		postgres=# \conninfo
+
+	You are now connected to database “postgres” as user “postgres”.
+
+Create user:
+	CREATE USER your_new_username WITH PASSWORD 'your_password' SUPERUSER;
+
+Chech all users:
+	\du+
