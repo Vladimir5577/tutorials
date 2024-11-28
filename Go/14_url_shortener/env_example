@@ -1,0 +1,2 @@
+DSN="host=localhost user=root password=password dbname=link port=5432 sslmode=disable"
+TOKEN=123

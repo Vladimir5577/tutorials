@@ -45,6 +45,11 @@ variant = 3;
     $ nvm list-remote
     $ nvm install v16.9.1
 
+
+    or 
+    $ sudo apt install npm --- it will install node and npm
+
+
 //===============================================================
 
 Install php-8.

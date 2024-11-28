@@ -52,3 +52,7 @@ $ dlv debug  --- open delve
 
 Print structure to the console:
 	fmt.Printf("Structure: %+v\n", my_structure)
+
+// ==========================================================
+Run to see garbage collection:
+	$ go run -gcflags -m main.go
