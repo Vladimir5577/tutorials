@@ -34,7 +34,9 @@ $ git branch   ---  check every branches (and see current)
 
 $ git checkout new_branch   ---  switch to "new_branch"
 
-$ git branch -D new_branch   ---  delete the branch "new_branch"
+$ git push -d <remote_name> <branchname> --- Delete remote (git push -d origin branch_name)
+
+$ git branch -d <branchname> --- Delete local
 
 $ git branch -b new_branch   ---  create a branch and switch to it (from current branch)
 
@@ -97,6 +99,9 @@ Reset changes in a folder or file
 
 //==================
 
+Rename:
+	$ git branch -m OLD-BRANCH-NAME NEW-BRANCH-NAME
+
 Rename current branch:
 	$ git branch -m <newname>
 
@@ -106,3 +111,5 @@ Log commits to specific branch with graph
 
 Check difference between commits
 	$ git diff <commit>...<commit>
+
+// 

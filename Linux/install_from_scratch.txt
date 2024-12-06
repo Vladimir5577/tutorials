@@ -24,6 +24,19 @@ Install docker (using convenience script):
         $ sudo chmod +x /usr/local/bin/docker-compose
         check 
         $ sudo docker-compose --version
+// =====================================================
+
+Give docker permission (not write sudo every time)
+
+$ sudo chmod 666 /var/run/docker.sock
+
+or 
+1. Create the docker group.
+    $ sudo groupadd docker
+2. Add your user to the docker group.
+    $ sudo usermod -aG docker $USER
+    $ newgrp docker 
+3. Give it a try!
 
 // =============================================================
 
@@ -33,6 +46,11 @@ Give a permission to ssh
     $ chmod 644 id_rsa.pub
     
 //===============================================================
+
+Install deb packages:
+    sudo gdebi code_XX.XXX.XXXXXXX_amd64.deb
+
+// ==============================================================
 
 Install node js:
 -------------------
