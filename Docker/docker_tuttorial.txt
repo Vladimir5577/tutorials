@@ -156,4 +156,6 @@ Remove docker unused images (restore spase).
 Check logs exited container:
 	$ docker logs <container_name>
 
-
+// =====================================================
+Inspect network
+	$ docker inspect <container id> | grep "IPAddress"
