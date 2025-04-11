@@ -56,3 +56,15 @@ Print structure to the console:
 // ==========================================================
 Run to see garbage collection:
 	$ go run -gcflags -m main.go
+
+// ==========================================================
+	Converting:
+	-----------
+String to int:
+	i, err := strconv.Atoi("123")
+
+String to uint64:
+	i, err = strconv.ParseUint("123", 10, 64)
+
+String to bool
+	 b, err := strconv.ParseBool("false")

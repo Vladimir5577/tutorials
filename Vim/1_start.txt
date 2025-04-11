@@ -397,3 +397,5 @@ We can split on multiple part
 
 
 
+Replce end lines with comma:
+	:%s/\n/,/g

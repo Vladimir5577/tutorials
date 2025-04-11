@@ -112,4 +112,6 @@ Log commits to specific branch with graph
 Check difference between commits
 	$ git diff <commit>...<commit>
 
-// 
+// =================
+	Remove last commit:
+	$ git reset --hard HEAD^
