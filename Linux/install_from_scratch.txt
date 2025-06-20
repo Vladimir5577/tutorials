@@ -19,11 +19,21 @@ Install docker (using convenience script):
     $  curl -fsSL https://get.docker.com -o get-docker.sh
     $  sudo sh get-docker.sh
 
+
     Install docker-compose:
-        $ sudo curl -SL https://github.com/docker/compose/releases/download/v2.29.6/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+        $  sudo curl -SL https://github.com/docker/compose/releases/download/v2.35.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
         $ sudo chmod +x /usr/local/bin/docker-compose
         check 
         $ sudo docker-compose --version
+
+    Install docker compose: - ??? (probably not need)
+        $ DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
+        $ mkdir -p $DOCKER_CONFIG/cli-plugins
+        $ curl -SL https://github.com/docker/compose/releases/download/v2.35.0/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
+        $ chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
+        Check:
+        $ docker compose version
+
 // =====================================================
 
 Give docker permission (not write sudo every time)
@@ -47,8 +57,12 @@ Give a permission to ssh
     
 //===============================================================
 
+
 Install deb packages:
-    sudo gdebi code_XX.XXX.XXXXXXX_amd64.deb
+
+    $ sudo gdebi code_XX.XXX.XXXXXXX_amd64.deb
+    or
+    $ sudo dpkg -i filename.deb
 
 // ==============================================================
 
