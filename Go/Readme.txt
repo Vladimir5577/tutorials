@@ -68,3 +68,8 @@ String to uint64:
 
 String to bool
 	 b, err := strconv.ParseBool("false")
+
+// ==========================================================
+
+Ruun in detach mode:
+	$ nohup ./main &
