@@ -61,3 +61,8 @@ Run migrations:
 
 5. Get statisticks:
     localhost:8081/stat?from=2024-11-20&to=2024-11-21&by=day
+
+// ==============================
+Print struct to console:
+
+    fmt.Printf("%#v", myStruct)  --- print struct with field

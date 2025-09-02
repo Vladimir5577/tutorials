@@ -108,4 +108,8 @@ Sftp connection to the server through file manager:
 
 	$ sftp://dev@88.888.888.88/
 
+//===============================================================
 
+Change password on server:
+    $ passwd 
+    then type new password
