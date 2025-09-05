@@ -4,53 +4,27 @@ import (
 	"context"
 	"fmt"
 	"log"
-	"time"
 
 	"github.com/segmentio/kafka-go"
 )
 
 func main() {
-	// to consume messages
-	topic := "my-topic"
-	partition := 0
+	
+	reader := kafka.NewReader(kafka.ReaderConfig{
+		Brokers: []string{"localhost:9092"},
+		Topic:   "my-topic",
+		GroupID: "my-groupID",
+	})
+	defer reader.Close()
 
-	conn, err := kafka.DialLeader(context.Background(), "tcp", "localhost:9092", topic, partition)
-	if err != nil {
-		log.Fatal("failed to dial leader:", err)
-	}
-
-	conn.SetReadDeadline(time.Now().Add(10 * time.Second))
-	batch := conn.ReadBatch(10e3, 1e6) // fetch 10KB min, 1MB max
-
-	b := make([]byte, 10e3) // 10KB max per message
+	// loop that we can listen 
 	for {
-		n, err := batch.Read(b)
+		msg, err := reader.ReadMessage(context.Background())
 		if err != nil {
-			break
+			log.Fatal("Ошибка при получении:", err)
 		}
-		fmt.Println(string(b[:n]))
+
+		fmt.Println(string(msg.Value))
 	}
-
-	if err := batch.Close(); err != nil {
-		log.Fatal("failed to close batch:", err)
-	}
-
-	if err := conn.Close(); err != nil {
-		log.Fatal("failed to close connection:", err)
-	}
-
-	// reader := kafka.NewReader(kafka.ReaderConfig{
-	// 	Brokers: []string{"localhost:9092"},
-	// 	Topic:   "my-topic",
-	// 	GroupID: "my-groupID",
-	// })
-	// defer reader.Close()
-
-	// msg, err := reader.ReadMessage(context.Background())
-	// if err != nil {
-	// 	log.Fatal("Ошибка при получении:", err)
-	// }
-
-	// fmt.Println(string(msg.Value))
 
 }

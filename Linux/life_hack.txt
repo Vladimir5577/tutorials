@@ -187,3 +187,6 @@ Check linux version
 // =====================================================
 Remove docker unused images (restore spase).
 	$ docker system prune --volumes
+
+Remove everything:
+	$ docker system prune -a

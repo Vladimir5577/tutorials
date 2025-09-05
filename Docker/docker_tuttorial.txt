@@ -21,6 +21,7 @@ Commands:
 	2. ps
 		$ docker ps		 ---  list all runnings containers
 		$ docker ps -a 	 ---  list whole containers	
+		$ docker network ls  --- list networks
 	3. stop
 		$ docker stop nginx  
 	4. rm --- remove a container
