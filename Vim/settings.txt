@@ -12,7 +12,7 @@ set smartindent
 set wrap
 set number
 set mouse=a
-set incseatch
+set incsearch
 set hlsearch
 set scrolloff=8 	--- to scrol with navigation
 colo ron      --- color by default
