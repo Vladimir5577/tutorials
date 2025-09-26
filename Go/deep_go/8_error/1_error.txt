@@ -1,0 +1,39 @@
+    Ошибка представленна в виде иньерфейса.
+
+type error interface {
+    Error() string
+}
+
+// ========================================
+
+    Custom error.
+    --------------
+
+type CustomError struct {
+	errMessage string
+	statusCode int 
+}
+
+func (e CustomError) Error() string {       // implement error interface
+	if e.errMessage != "" {
+		return e.errMessage + " " + e.statusCode
+	} else {
+		return ""
+	}
+}
+
+
+// ========================================
+
+    Создание стандартной ошибки.
+    ----------------------------
+
+func createErrV1() error {
+	return errors.New("simple error")
+}
+
+func createErrV2() error {
+	return fmt.Errorf("error with argument %d", 1000)
+}
+
+// ========================================
