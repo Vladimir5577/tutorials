@@ -68,6 +68,8 @@ $ git diff   ---  to see changes
 
 $ git diff master..new_branch   ---  to compare 2 branches
 
+//==================
+
 $ git reset --hard  ---  to delete all of changes 
 $ git clean -f -d   ---  to delete all untracked files and direcrories
 

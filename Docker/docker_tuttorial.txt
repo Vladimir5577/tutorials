@@ -160,3 +160,7 @@ Check logs exited container:
 // =====================================================
 Inspect network
 	$ docker inspect <container id> | grep "IPAddress"
+
+// =====================================================
+Restart docker completely:
+	$ sudo systemctl restart docker 

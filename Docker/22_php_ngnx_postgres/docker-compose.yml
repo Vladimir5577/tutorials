@@ -1,0 +1,68 @@
+services:
+  php_fpm:
+    build:
+      context: .
+      dockerfile: docker_env/php/Dockerfile
+    container_name: php_fpm
+    volumes:
+      - ./src:/var/www/html
+#      - ./config:/var/www/html/config
+#      - ./partners:/var/www/html/partners
+#      - ./lib:/var/www/html/lib
+      - ./logs:/var/www/html/logs
+    networks:
+      - app-network
+    expose:
+      - "9000" # Это порт для PHP-FPM, Nginx будет проксировать на него
+
+  nginx:
+    container_name: nginx
+    build: ./docker_env/nginx/
+    volumes:
+#      - ./docker_env/nginx/:/etc/nginx/nginx.conf
+#      - ./logs:/var/www/html/logs
+      - ./src:/var/www/html
+    ports:
+      - "80:80"
+    depends_on:
+      - php_fpm
+    networks:
+      - app-network
+
+  postgres:
+    container_name: postgres
+    image: postgres:16.4
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: bitrix_rest_api
+      PGDATA: /data/postgres
+    volumes:
+      - ../postgres_data:/data/postgres
+    ports:
+      - 5432:5432
+    networks:
+      - app-network
+
+  dbgate:
+    container_name: dbgate
+    image: dbgate/dbgate:5.5.6-alpine
+    restart: always
+    ports:
+      - 8087:3000
+    volumes:
+      - ../postgres_data:/data/postgres
+    environment:
+      CONNECTIONS: con2
+      LABEL_con2: Postgres
+      SERVER_con2: postgres
+      USER_con2: root
+      PASSWORD_con2: password
+      PORT_con2: 5432
+      ENGINE_con2: postgres@dbgate-plugin-postgres
+    networks:
+    - app-network
+
+networks:
+  app-network:
+    driver: bridge
