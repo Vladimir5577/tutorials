@@ -152,6 +152,17 @@ or
 // =====================================================
 Remove docker unused images (restore spase).
 	$ docker system prune --volumes
+	$ docker system prune -a
+	$ docker volume prune
+	$ docker network prune
+	$ docker-compose down --volumes --remove-orphans
+
+	or 
+	$ docker stop $(docker ps -aq)
+	$ docker rm $(docker ps -aq)
+	$ docker rmi -f $(docker images -aq)
+
+
 
 // =====================================================
 Check logs exited container:
