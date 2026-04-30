@@ -1,0 +1,29 @@
+? --- to see shortkat
+/ --- command of clade
+
+@ --- and write file name to understand file to work with
+		also we can lighlight lines in file
+
+// ===================================
+
+/init --- to init or recheck project
+2 Esc  --- show history in chat and navigate and checkout on point
+Shift + Tab --- regime change (plane default)
+
+// =====================================
+
+on phase create project need to add users only moderators.
+remove addind boards
+
+rename in sidebar, rename in header
+
+add favorite to show projects on the top
+
+add 3 button in board to edit like in yougile
+add 3 button to card 
+
+
+on users add profession and phone
+save user number in core (without bracket)
+
+user должность - переименовать.

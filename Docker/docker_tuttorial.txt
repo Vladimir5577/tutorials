@@ -163,6 +163,13 @@ Remove docker unused images (restore spase).
 	$ docker rmi -f $(docker images -aq)
 
 
+	$ docker stop $(docker ps -aq) && \
+		docker system prune --volumes -f && \
+		docker system prune -a -f && \
+		docker volume prune -f && \
+		docker network prune -f && \
+		docker rm $(docker ps -aq) && \
+		docker rmi -f $(docker images -aq)
 
 // =====================================================
 Check logs exited container:
@@ -175,3 +182,37 @@ Inspect network
 // =====================================================
 Restart docker completely:
 	$ sudo systemctl restart docker 
+
+
+
+On page users remove действия login and it should be in a tag to click and add organization.
+add filter to users 
+
+remove menu in sidebar
+
+on hower in up right site
+
+in sidebar make simple remove dropdowns
+Add favorite users to created document
+
+need to add last seen 
+users should change status
+
+
+validation on date - defauld today
+
+in sidebar in adaptive add icons
+
+in sign document instead of point need to figure of stamp
+add position to sign
+need multisign
+
+if rejected need to write why
+in work need to add deadline
+
+when new document pressed wiew need to change status in wiew
+
+// =====================================
+
+add task write name and click on random place
+click on task need to see description
