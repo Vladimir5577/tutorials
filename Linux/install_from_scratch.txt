@@ -67,19 +67,22 @@ Install deb packages:
 // ==============================================================
 
 Install node js:
--------------------
-link: https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04-ru
-variant = 3;
 
-    $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh
-    $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
-    $ source ~/.bashrc
-    $ nvm list-remote
-    $ nvm install v16.9.1
+    # 1. Install NVM
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.6/install.sh | bash
+    # or for WSL / Linux
+    wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.6/install.sh | bash
 
+    # 2. Reload shell
+    export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-    or 
-    $ sudo apt install npm --- it will install node and npm
+    # 3. Install Node.js (latest LTS)
+    nvm install --lts
+
+    # 4. Check Node and npm versions
+    node -v
+    npm -v
 
 
 //===============================================================
